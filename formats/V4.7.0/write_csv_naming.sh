@@ -104,7 +104,7 @@ This version modifies a portion of the structure of the metadata. Many files com
 
 Supersedes
 ----------
-This version supersedes V4.4.0, for files released as of R2020Q1.
+This version supersedes V4.6.0, for files released as of R2020Q1.
 
 
 Basic Filename Schema

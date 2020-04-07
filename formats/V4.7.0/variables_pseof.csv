@@ -5,3 +5,6 @@ y5_grads_emp,y5_grads_emp,status_y5_grads_emp,Graduates Employed in year 5,Count
 y5_grads_emp_instate,y5_grads_emp_instate,status_y5_grads_emp_instate,Graduates Employed Instate in year 5,Count of graduates employed in same state as educational institution in year 5,Count,Employment,1
 y10_grads_emp,y10_grads_emp,status_y10_grads_emp,Graduates Employed in year 10,Count of employed graduates in year 10,Count,Employment,1
 y10_grads_emp_instate,y10_grads_emp_instate,status_y10_grads_emp_instate,Graduates Employed Instate in year 10,Count of graduates employed in same state as educational institution in year 10,Count,Employment,1
+y1_grads_nme,y1_grads_nme,status_y1_grads_nme,Graduates Jobless or Marginally Employed in year 1,Count of Graduates Jobless or Marginally Employed in year 1,Count,Employment,1
+y5_grads_nme,y5_grads_nme,status_y5_grads_nme,Graduates Jobless or Marginally Employed in year 5,Count of Graduates Jobless or Marginally Employed in year 5,Count,Employment,1
+y10_grads_nme,y10_grads_nme,status_y10_grads_nme,Graduates Jobless or Marginally Employed in year 10,Count of Graduates Jobless or Marginally Employed in year 10,Count,Employment,1

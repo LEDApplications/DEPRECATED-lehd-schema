@@ -148,7 +148,7 @@ Identifiers without the year and quarter component can be considered a series id
 " >> $asciifile
 
 ############################## Identifiers
-for arg in  lehd_mapping_identifiers.csv
+for arg in lehd_mapping_identifiers.csv
 do
   name="$(echo ${arg%*.csv}| sed 's/lehd_//; s/_/ for /; s/mapping/Mapping/; s/ident/Ident/')"
   echo "==== $name
@@ -165,7 +165,8 @@ include::$arg[]
 " >> $asciifile
 done
 
-for arg in   $(ls lehd_identifiers_*csv)
+### Hardcode identifier order
+for arg in lehd_identifiers_qwi.csv lehd_identifiers_j2j.csv lehd_identifiers_j2jod.csv lehd_identifiers_pseo.csv
 do
   name="$(echo ${arg%*.csv}| sed 's/lehd_//; s/_/ for /; s/ident/Ident/')"
   echo "==== $name
@@ -179,6 +180,7 @@ include::$arg[]
 
 " >> $asciifile
 done
+
 
 ################################# Variables
 echo "
@@ -413,7 +415,7 @@ Categorical variable descriptions are displayed above each table, with the varia
 " >> $asciifile
 
 # we do industry and geo last
-for arg in $(ls label_*csv| grep -vE "geo|ind_level|industry|agg_level|flags|fips|stusps|concept_draft")
+for arg in $(ls label_*csv| grep -vE "geo|ind_level|industry|agg_level|flags|fips|stusps|concept_draft|pseo|cip|inst|degree")
 do
   name=$(echo ${arg%*.csv}| sed 's/label_//')
   echo "=== $name
@@ -560,7 +562,7 @@ include::$tmp_cip_rows[]
 echo "
 === Grad Cohort
 
-This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable.
+This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable. 
 
 [source]
 --
@@ -610,6 +612,7 @@ Tabulations are not done across degree types, so grad_cohort_years will be repor
 	grep -E ",M$" tmp3.csv | sort -n -k 1 -t , >> label_geography.csv
 	grep -E ",W$" tmp3.csv | sort    -k 1 -t , >> label_geography.csv
 	grep -E ",B$" tmp3.csv | sort -n -k 1 -t , >> label_geography.csv
+	grep -E ",D$" tmp3.csv | sort -n -k 1 -t , >> label_geography.csv
   # we check that we have the same numbers
 
 	# convert to UTF-8
@@ -742,6 +745,8 @@ cut -d ',' -f 1-9 $nsfileshort >> $tmp_nsfileshort_csv
 echo "
 <<<
 === Aggregation level
+
+==== J2J
 ( link:$nsfile[] )
 
 Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.
@@ -888,18 +893,18 @@ The contents contains the following elements:
 include::tmp_$arg[]
 |===================================================
 
-For instance, the metadata for a recent QWI release of 
+For instance, the metadata for the $versionvintage QWI release of
 $(grep -E "^$versionstate," naming_geohi.csv | awk  -F, ' { print $2 } ' | sed 's/"//g')
-(the latest can be viewed $versionurl/version_qwi.txt[here]) has the following content:
+(obtained from $versionurl/version_qwi.txt[here]) has the following content:
 --------------------------------
 " >> $asciifile
 # During the RC phase, this won't work, since it is not published yet
 echo "
 $(curl $versionurl/version_qwi.txt)
 --------------------------------
-Similarly, the metadata for a recent release of 
+Similarly, the metadata for the $versionj2jvintage release of
 $(grep -E "^$versionstate," naming_geohi.csv | awk  -F, ' { print $2 } ' | sed 's/"//g') J2J
-tabulations (the latest can be viewed $versionj2jurl/version_j2j.txt[here]) has  the following content:
+tabulations (obtained from $versionj2jurl/version_j2j.txt[here]) has  the following content:
 --------------------------------
 $(curl $versionj2jurl/version_j2j.txt)
 --------------------------------

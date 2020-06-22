@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/LEDApplications/lehd-schema.svg?branch=master)](https://travis-ci.org/github/LEDApplications/lehd-schema)
+[![Build Status](https://travis-ci.org/LEDApplications/lehd-schema.svg?branch=master)](https://travis-ci.org/LEDApplications/lehd-schema)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597959.svg)](https://doi.org/10.5281/zenodo.597959)
 

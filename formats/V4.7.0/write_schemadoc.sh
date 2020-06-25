@@ -198,7 +198,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI (QWIPU) ====
+==== National QWI and state-level QWI ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width=\"95%\",format=\"csv\",cols=\"3*^2,<5,<5,<2,<2,^2\",options=\"header\"]
@@ -207,7 +207,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates (QWIPUR) ====
+==== National QWI and state-level QWI rates ====
 Rates are computed from published data, and are provided as a convenience.
 
 

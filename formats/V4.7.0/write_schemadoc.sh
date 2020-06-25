@@ -489,12 +489,6 @@ include::label_inst_level.csv[]
 |===================================================
 " >> $asciifile
 
-tmp_inst_cols=$(mktemp -p $cwd)
-tmp_inst_rows=$(mktemp -p $cwd)
-cut -d ',' -f 1,2,4 label_institution.csv >> $tmp_inst_cols
-head -8 $tmp_inst_cols > $tmp_inst_rows
-echo "...,," >> $tmp_inst_rows
-head -100 $tmp_inst_cols | tail -8  >> $tmp_inst_rows
 echo "
 ==== Institution
 ( link:label_institution.csv[] )
@@ -503,9 +497,9 @@ Institution identifiers are sourced from the
 https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
 This list has been supplemented with records for regional groupings of institutions.
 
-[width=\"60%\",format=\"csv\",cols=\"^1,<5,^1\",options=\"header\"]
+[width=\"80%\",format=\"csv\",cols=\"^1,<4,^2,3*^1\",options=\"header\"]
 |===================================================
-include::$tmp_inst_rows[]
+include::label_institution.csv[lines=1;2630..2634]
 |===================================================
 " >> $asciifile
 

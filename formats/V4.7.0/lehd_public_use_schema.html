@@ -15,7 +15,7 @@
 <h1>LEHD Public Use Data Schema V4.7.0</h1>
 <div class="details">
 <span id="author" class="author">&lt;ces.qwi.feedback@census.gov&gt;</span><br>
-<span id="revdate">22 June 2020</span>
+<span id="revdate">25 June 2020</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -38,8 +38,8 @@
 </li>
 <li><a href="#_indicators">5.3. Indicators</a>
 <ul class="sectlevel3">
-<li><a href="#_national_qwi_and_state_level_qwi_qwipu">5.3.1. National QWI and state-level QWI (QWIPU)</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi_rates_qwipur">5.3.2. National QWI and state-level QWI rates (QWIPUR)</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi">5.3.1. National QWI and state-level QWI</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_rates">5.3.2. National QWI and state-level QWI rates</a></li>
 <li><a href="#_job_to_job_flow_counts_j2j">5.3.3. Job-to-job flow counts (J2J)</a></li>
 <li><a href="#_job_to_job_flow_rates_j2jr">5.3.4. Job-to-job flow rates (J2JR)</a></li>
 <li><a href="#_job_to_job_flow_origin_destination_j2jod">5.3.5. Job-to-job flow Origin-Destination (J2JOD)</a></li>
@@ -50,8 +50,8 @@
 <li><a href="#_variability_measures">5.4. Variability measures</a>
 <ul class="sectlevel3">
 <li><a href="#_generic_structure_2">5.4.1. Generic structure</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi">5.4.2. National QWI and state-level QWI</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi_rates">5.4.3. National QWI and state-level QWI rates</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_2">5.4.2. National QWI and state-level QWI</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_rates_2">5.4.3. National QWI and state-level QWI rates</a></li>
 <li><a href="#_job_to_job_flow_counts_j2j_2">5.4.4. Job-to-job flow counts (J2J)</a></li>
 <li><a href="#_job_to_job_flow_rates_j2jr_2">5.4.5. Job-to-job flow rates (J2JR)</a></li>
 <li><a href="#_job_to_job_flow_origin_destination_j2jod_2">5.4.6. Job-to-job flow Origin-Destination (J2JOD)</a></li>
@@ -274,13 +274,15 @@ to the released files. The actual CSV files containing the identifiers for each 
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1112%;">
+<col style="width: 27.2727%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.091%;">
 </colgroup>
 <thead>
 <tr>
@@ -291,52 +293,53 @@ to the released files. The actual CSV files containing the identifiers for each 
 <th class="tableblock halign-center valign-top">J2JR</th>
 <th class="tableblock halign-center valign-top">J2JOD</th>
 <th class="tableblock halign-center valign-top">PSEOE</th>
+<th class="tableblock halign-center valign-top">PSEOF</th>
+<th class="tableblock halign-center valign-top">LODES</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PSEOF</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">LODES</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">lehd_identifiers_qwi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lehd_identifiers_qwi</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">lehd_identifiers_j2j</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lehd_identifiers_j2j</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">lehd_identifiers_j2jod</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lehd_identifiers_j2jod</p></td>
+<td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">lehd_identifiers_pseo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lehd_identifiers_pseo</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 </tbody>
@@ -817,7 +820,7 @@ list the indicators available on each file.  The descriptor files themselves are
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_qwipu">5.3.1. National QWI and state-level QWI (QWIPU)</h4>
+<h4 id="_national_qwi_and_state_level_qwi">5.3.1. National QWI and state-level QWI</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwi.csv">variables_qwi.csv</a> )</p>
 </div>
@@ -1170,7 +1173,7 @@ list the indicators available on each file.  The descriptor files themselves are
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_rates_qwipur">5.3.2. National QWI and state-level QWI rates (QWIPUR)</h4>
+<h4 id="_national_qwi_and_state_level_qwi_rates">5.3.2. National QWI and state-level QWI rates</h4>
 <div class="paragraph">
 <p>Rates are computed from published data, and are provided as a convenience.</p>
 </div>
@@ -2442,7 +2445,7 @@ of variability measures are printed, but the complete list is available in the l
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi">5.4.2. National QWI and state-level QWI</h4>
+<h4 id="_national_qwi_and_state_level_qwi_2">5.4.2. National QWI and state-level QWI</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwiv.csv">variables_qwiv.csv</a> )</p>
 </div>
@@ -2609,7 +2612,7 @@ of variability measures are printed, but the complete list is available in the l
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_rates">5.4.3. National QWI and state-level QWI rates</h4>
+<h4 id="_national_qwi_and_state_level_qwi_rates_2">5.4.3. National QWI and state-level QWI rates</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwirv.csv">variables_qwirv.csv</a> )</p>
 </div>
@@ -3445,99 +3448,73 @@ Future releases may aggregate to institutions to higher levels, such as state or
 <a href="https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp">U.S. Department of Education, Federal Student Aid office</a>.
 This list has been supplemented with records for regional groupings of institutions.</p>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 60%;">
+<table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
-<col style="width: 14.2857%;">
-<col style="width: 71.4285%;">
-<col style="width: 14.2858%;">
+<col style="width: 10%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-center valign-top">institution</th>
 <th class="tableblock halign-left valign-top">label</th>
+<th class="tableblock halign-center valign-top">city</th>
 <th class="tableblock halign-center valign-top">institution_state</th>
+<th class="tableblock halign-center valign-top">inst_level</th>
+<th class="tableblock halign-center valign-top">statefips</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in New England Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00137000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">University of Colorado Boulder</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Boulder</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">CO</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">08</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in Middle Atlantic Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00232500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">University of Michigan</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Ann Arbor</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">26</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in East North Central Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00309000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ohio State University</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Columbus</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OH</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">39</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in West North Central Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00332900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pennsylvania State University (The)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">University Park</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">PA</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">42</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in South Atlantic Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00389500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">University of Wisconsin - Madison</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Madison</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">WI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">55</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in East South Central Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in West South Central Division</p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100329</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100330</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100331</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100332</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100333</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100334</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100335</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00100336</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Faulkner University -</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AL</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">00955800</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">University of Texas</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Austin</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">TX</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">48</p></td>
 </tr>
 </tbody>
 </table>
@@ -3685,11 +3662,13 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 <div class="sect2">
 <h3 id="_grad_cohort">6.16. Grad Cohort</h3>
 <div class="paragraph">
-<p>This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <a href="#_grad_cohort_years">Grad Cohort Years</a> variable.</p>
+<p><code>grad_cohort</code> is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <a href="#_grad_cohort_years">Grad Cohort Years</a> variable.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlight"><code>If grad_cohort is 2010 and grad_cohort_years is 3, then the cell includes graduates from (2010, 2011, and 2012).</code></pre>
+<div class="paragraph">
+<p>If <code>grad_cohort</code>=2010 and <code>grad_cohort_years</code>=3, then the cell includes graduates from 2010, 2011, and 2012.</p>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -3699,15 +3678,7 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 <div class="sect2">
 <h3 id="_grad_cohort_years">6.17. Grad Cohort Years</h3>
 <div class="paragraph">
-<p>This is the number of years in the cohort of reference (see <a href="#_grad_cohort">Grad Cohort</a>). It varies by degree_level.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>If degree_level=05, grad_cohort_years=3 (3 year cohorts for bachelor's degrees) otherwise, grad_cohort_years=5 (5 year cohorts for all other degrees).</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Tabulations are not done across degree types, so grad_cohort_years will be reported when grad_cohort=0000.</p>
+<p><code>grad_cohort_years</code> is the number of years in the cohort of reference (see <a href="#_grad_cohort">Grad Cohort</a>). It varies by <a href="#_degree_level">Degree level</a>. Bachelor&#8217;s degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The <code>grad_cohort_years</code> will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in <code>grad_cohort_years</code> when <code>grad_cohort</code>=0000.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3783,7 +3754,8 @@ The 2019 vintage of <a href="https://www.census.gov/geographies/mapping-files/ti
 </div>
 <div class="paragraph">
 <p>The file <a href="label_fipsnum.csv">label_fipsnum.csv</a> contains values and labels
-for all entities of <a href="#geolevel">geo_level</a> 'N' or 'S', and is a summary of separately available files.</p>
+for all entities of <a href="#geolevel">geo_level</a> 'N' or 'S', and is a summary of separately available files.
+For more information on which states comprise each division, see the map <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf">here</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 40%;">
 <colgroup>
@@ -5289,7 +5261,7 @@ tabulations (obtained from <a href="https://lehd.ces.census.gov/data/j2j/latest_
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>J2J DE 10 2000:2-2018:1 V4.4.0 R2019Q1 j2jpu_de_20190508_0952</pre>
+<pre>J2J DE 10 2000:2-2019:2 V4.6.0 R2020Q2 j2jpu_de_20200620_0943</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5467,7 +5439,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>This revision: Mon Jun 22 18:50:39 UTC 2020</p>
+<p>This revision: Thu Jun 25 21:29:50 UTC 2020</p>
 </div>
 </div>
 </div>
@@ -5477,7 +5449,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-22 18:50:39 UTC
+Last updated 2020-06-25 21:29:50 UTC
 </div>
 </div>
 </body>

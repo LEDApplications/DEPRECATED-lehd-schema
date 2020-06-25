@@ -157,7 +157,7 @@ do
 Each of the released files has a set of variables uniquely identifying records ('Identifiers'). The table below relates the set of identifier specifications
 to the released files. The actual CSV files containing the identifiers for each set are listed after this table. Each identifier can take on a specified list of values, documented in the section on <<catvars,Categorical Variables>>.
 
-[width=\"80%\",format=\"csv\",cols=\"<3,6*^1\",options=\"header\"]
+[width=\"80%\",format=\"csv\",cols=\"<3,8*^1\",options=\"header\"]
 |===================================================
 include::$arg[]
 |===================================================
@@ -198,7 +198,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI (QWIPU) ====
+==== National QWI and state-level QWI ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width=\"95%\",format=\"csv\",cols=\"3*^2,<5,<5,<2,<2,^2\",options=\"header\"]
@@ -207,7 +207,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates (QWIPUR) ====
+==== National QWI and state-level QWI rates ====
 Rates are computed from published data, and are provided as a convenience.
 
 
@@ -489,12 +489,14 @@ include::label_inst_level.csv[]
 |===================================================
 " >> $asciifile
 
-tmp_inst_cols=$(mktemp -p $cwd)
-tmp_inst_rows=$(mktemp -p $cwd)
-cut -d ',' -f 1,2,4 label_institution.csv >> $tmp_inst_cols
-head -8 $tmp_inst_cols > $tmp_inst_rows
-echo "...,," >> $tmp_inst_rows
-head -100 $tmp_inst_cols | tail -8  >> $tmp_inst_rows
+#Institution rownum
+#University of Colorado Boulder 2630
+#University of Texas - Austin 32017
+#Ohio State University 17398
+#University of Michigan (00232500) 11819
+#University of Wisconsin - Madison 23062
+#Pennsylvania State University (00332900) 19324
+
 echo "
 ==== Institution
 ( link:label_institution.csv[] )
@@ -503,9 +505,9 @@ Institution identifiers are sourced from the
 https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
 This list has been supplemented with records for regional groupings of institutions.
 
-[width=\"60%\",format=\"csv\",cols=\"^1,<5,^1\",options=\"header\"]
+[width=\"80%\",format=\"csv\",cols=\"^1,<4,^2,3*^1\",options=\"header\"]
 |===================================================
-include::$tmp_inst_rows[]
+include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
 |===================================================
 " >> $asciifile
 
@@ -562,25 +564,17 @@ include::$tmp_cip_rows[]
 echo "
 === Grad Cohort
 
-This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable. 
+\`grad_cohort\` is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable.
 
-[source]
---
-If grad_cohort is 2010 and grad_cohort_years is 3, then the cell includes graduates from (2010, 2011, and 2012).
---
+====
+If \`grad_cohort\`=2010 and \`grad_cohort_years\`=3, then the cell includes graduates from 2010, 2011, and 2012.
+====
 
 When tabulating across all cohorts, the value *0000* will be used for grad_cohort.
 
 === Grad Cohort Years
 
-This is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by degree_level.
-
-[source]
---
-If degree_level=05, grad_cohort_years=3 (3 year cohorts for bachelor's degrees) otherwise, grad_cohort_years=5 (5 year cohorts for all other degrees).
---
-
-Tabulations are not done across degree types, so grad_cohort_years will be reported when grad_cohort=0000.
+\`grad_cohort_years\` is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by <<#_degree_level>>. Bachelor's degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The \`grad_cohort_years\` will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in \`grad_cohort_years\` when \`grad_cohort\`=0000.
 " >> $asciifile
 
 ################################ Geo formats
@@ -657,7 +651,7 @@ echo "
 
 The file link:$nsfile[$nsfile] contains values and labels
 for all entities of <<geolevel,geo_level>> 'N' or 'S', and is a summary of separately available files.
-
+For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
 [width=\"40%\",format=\"csv\",cols=\"^1,<3,^1\",options=\"header\"]
 |===================================================
 include::tmp.csv[]

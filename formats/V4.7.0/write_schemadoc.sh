@@ -489,6 +489,14 @@ include::label_inst_level.csv[]
 |===================================================
 " >> $asciifile
 
+#Institution rownum
+#University of Colorado Boulder 2630
+#University of Texas - Austin 32017
+#Ohio State University 17398
+#University of Michigan (00232500) 11819
+#University of Wisconsin - Madison 23062
+#Pennsylvania State University (00332900) 19324
+
 echo "
 ==== Institution
 ( link:label_institution.csv[] )
@@ -499,7 +507,7 @@ This list has been supplemented with records for regional groupings of instituti
 
 [width=\"80%\",format=\"csv\",cols=\"^1,<4,^2,3*^1\",options=\"header\"]
 |===================================================
-include::label_institution.csv[lines=1;2630..2634]
+include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
 |===================================================
 " >> $asciifile
 

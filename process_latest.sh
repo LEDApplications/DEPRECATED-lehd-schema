@@ -23,5 +23,6 @@ echo "Processing $latest with output=$VERSION"
 echo "========================================="
 
 # do stuff
+latest=V4.4.0
 cd $FILES/$latest
 ./$GLOBALSH $VERSION

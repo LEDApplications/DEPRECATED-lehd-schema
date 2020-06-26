@@ -5,16 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="&lt;ces.qwi.feedback@census.gov&gt;">
-<title>LEHD Public Use Data Schema V4.7.0</title>
+<meta name="author" content="Lars Vilhuber">
+<title>LEHD Public Use Data Schema V4.5.0-draft</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>LEHD Public Use Data Schema V4.7.0</h1>
+<h1>LEHD Public Use Data Schema V4.5.0-draft</h1>
 <div class="details">
-<span id="author" class="author">&lt;ces.qwi.feedback@census.gov&gt;</span><br>
+<span id="author" class="author">Lars Vilhuber</span><br>
+<span id="email" class="email"><a href="mailto:ces.qwi.feedback@census.gov">ces.qwi.feedback@census.gov</a></span><br>
 <span id="revdate">26 June 2020</span>
 </div>
 <div id="toc" class="toc">
@@ -38,8 +39,8 @@
 </li>
 <li><a href="#_indicators">5.3. Indicators</a>
 <ul class="sectlevel3">
-<li><a href="#_national_qwi_and_state_level_qwi">5.3.1. National QWI and state-level QWI</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi_rates">5.3.2. National QWI and state-level QWI rates</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_qwipu">5.3.1. National QWI and state-level QWI (QWIPU)</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_rates_qwipur">5.3.2. National QWI and state-level QWI rates (QWIPUR)</a></li>
 <li><a href="#_job_to_job_flow_counts_j2j">5.3.3. Job-to-job flow counts (J2J)</a></li>
 <li><a href="#_job_to_job_flow_rates_j2jr">5.3.4. Job-to-job flow rates (J2JR)</a></li>
 <li><a href="#_job_to_job_flow_origin_destination_j2jod">5.3.5. Job-to-job flow Origin-Destination (J2JOD)</a></li>
@@ -50,8 +51,8 @@
 <li><a href="#_variability_measures">5.4. Variability measures</a>
 <ul class="sectlevel3">
 <li><a href="#_generic_structure_2">5.4.1. Generic structure</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi_2">5.4.2. National QWI and state-level QWI</a></li>
-<li><a href="#_national_qwi_and_state_level_qwi_rates_2">5.4.3. National QWI and state-level QWI rates</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi">5.4.2. National QWI and state-level QWI</a></li>
+<li><a href="#_national_qwi_and_state_level_qwi_rates">5.4.3. National QWI and state-level QWI rates</a></li>
 <li><a href="#_job_to_job_flow_counts_j2j_2">5.4.4. Job-to-job flow counts (J2J)</a></li>
 <li><a href="#_job_to_job_flow_rates_j2jr_2">5.4.5. Job-to-job flow rates (J2JR)</a></li>
 <li><a href="#_job_to_job_flow_origin_destination_j2jod_2">5.4.6. Job-to-job flow Origin-Destination (J2JOD)</a></li>
@@ -125,7 +126,7 @@
 <li><a href="#_changes">9.  Changes</a>
 <ul class="sectlevel2">
 <li><a href="#_this_version_revisions">9.1. This version (revisions)</a></li>
-<li><a href="#_version_4_7_0_from_4_6_0_and_4_5_0_draft">9.2. Version 4.7.0 from 4.6.0 and 4.5.0-draft</a></li>
+<li><a href="#_version_4_5_0_from_4_4_0">9.2. Version 4.5.0 from 4.4.0</a></li>
 </ul>
 </li>
 </ul>
@@ -190,7 +191,7 @@ with header variable definitions.  Changes relative to the original v4.0 version
 <h2 id="_supersedes">4. Supersedes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This version supersedes V4.6.0, for files released as of R2020Q1.</p>
+<p>This version supersedes V4.6.0, for files released as of R2019Q1.</p>
 </div>
 </div>
 </div>
@@ -198,7 +199,7 @@ with header variable definitions.  Changes relative to the original v4.0 version
 <h2 id="_basic_schema">5. Basic Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each data file is structured as a CSV file. The first columns contain <a href="#identifiers">[identifiers]</a>, subsequent columns contain <a href="#indicators">[indicators]</a>, followed by <a href="#statusflags">status flags</a>. In some cases, visually formatted Excel (XLSX) files are also available,  containing the same information together with header lines  on each sheet.</p>
+<p>Each data file is structured as a CSV (comma separated values) file. The first columns contain <a href="#identifiers">[identifiers]</a>, subsequent columns contain <a href="#indicators">[indicators]</a>, followed by <a href="#statusflags">status flags</a>. In some cases, visually formatted Excel (XLSX) files are also available, containing the same information together with header lines on each sheet. Excel versions may contain labels following each identifier variable, and data may be abridged from the CSV due to size limitations.</p>
 </div>
 <div class="sect2">
 <h3 id="_generic_structure">5.1. Generic structure</h3>
@@ -820,7 +821,7 @@ list the indicators available on each file.  The descriptor files themselves are
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi">5.3.1. National QWI and state-level QWI</h4>
+<h4 id="_national_qwi_and_state_level_qwi_qwipu">5.3.1. National QWI and state-level QWI (QWIPU)</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwi.csv">variables_qwi.csv</a> )</p>
 </div>
@@ -1173,7 +1174,7 @@ list the indicators available on each file.  The descriptor files themselves are
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_rates">5.3.2. National QWI and state-level QWI rates</h4>
+<h4 id="_national_qwi_and_state_level_qwi_rates_qwipur">5.3.2. National QWI and state-level QWI rates (QWIPUR)</h4>
 <div class="paragraph">
 <p>Rates are computed from published data, and are provided as a convenience.</p>
 </div>
@@ -1727,46 +1728,6 @@ list the indicators available on each file.  The descriptor files themselves are
 <td class="tableblock halign-left valign-top"><p class="tableblock">Earnings</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">JobStayS</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">EESepSEarn_Orig</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">fee_doms2_jfqearn</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">sEESepSEarn_Orig</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average Earnings prior to Stable Job-to-Job Separations (Continuous Employment)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average quarterly earnings prior to job flows with no observed nonemployment spell</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dollars</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Earnings</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">EESepS</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">EEHireSEarn_Dest</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">fee_doma2_kfqearn</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">sEEHireSEarn_Dest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average Earnings following Stable Job-to-Job Hires (Continuous Employment)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average quarterly earnings following job flows with no observed nonemployment spell</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dollars</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Earnings</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">EEHireS</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AQSepSEarn_Orig</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">faq_doms2_jfqearn</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">sAQSepSEarn_Orig</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average Earnings prior to Stable Job-to-Job Separations (Brief Nonemployment)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average quarterly earnings prior to job flows with a short nonemployment spell</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dollars</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Earnings</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AQSepS</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AQHireSEarn_Dest</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">faq_doma2_kfqearn</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">sAQHireSEarn_Dest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average Earnings following Stable Job-to-Job Hires (Brief Nonemployment)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Average quarterly earnings following job flows with a short nonemployment spell</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dollars</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Earnings</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">AQHireS</p></td>
-</tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
@@ -2189,21 +2150,21 @@ list the indicators available on each file.  The descriptor files themselves are
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">y1_ipeds_count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y1_ipeds_count</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status_ipeds_count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count of IPEDS reported graduates of programs included in year 1 earnings</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Graduates</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">y5_ipeds_count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y5_ipeds_count</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status_ipeds_count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count of IPEDS reported graduates of programs included in year 5 earnings</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Graduates</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">y10_ipeds_count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y10_ipeds_count</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status_ipeds_count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count of IPEDS reported graduates of programs included in year 10 earnings</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Graduates</p></td>
@@ -2274,27 +2235,6 @@ list the indicators available on each file.  The descriptor files themselves are
 <td class="tableblock halign-left valign-top"><p class="tableblock">y10_grads_emp_instate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">status_y10_grads_emp_instate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count of graduates employed in same state as educational institution in year 10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Employment</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">y1_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y1_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count of Graduates Jobless or Marginally Employed in year 1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Employment</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">y5_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y5_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count of Graduates Jobless or Marginally Employed in year 5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Employment</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">y10_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status_y10_grads_nme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count of Graduates Jobless or Marginally Employed in year 10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Employment</p></td>
 </tr>
@@ -2445,7 +2385,7 @@ of variability measures are printed, but the complete list is available in the l
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_2">5.4.2. National QWI and state-level QWI</h4>
+<h4 id="_national_qwi_and_state_level_qwi">5.4.2. National QWI and state-level QWI</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwiv.csv">variables_qwiv.csv</a> )</p>
 </div>
@@ -2612,7 +2552,7 @@ of variability measures are printed, but the complete list is available in the l
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_national_qwi_and_state_level_qwi_rates_2">5.4.3. National QWI and state-level QWI rates</h4>
+<h4 id="_national_qwi_and_state_level_qwi_rates">5.4.3. National QWI and state-level QWI rates</h4>
 <div class="paragraph">
 <p>( <a href="variables_qwirv.csv">variables_qwirv.csv</a> )</p>
 </div>
@@ -3448,73 +3388,99 @@ Future releases may aggregate to institutions to higher levels, such as state or
 <a href="https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp">U.S. Department of Education, Federal Student Aid office</a>.
 This list has been supplemented with records for regional groupings of institutions.</p>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 80%;">
+<table class="tableblock frame-all grid-all" style="width: 60%;">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 40%;">
-<col style="width: 20%;">
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 10%;">
+<col style="width: 14.2857%;">
+<col style="width: 71.4285%;">
+<col style="width: 14.2858%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-center valign-top">institution</th>
 <th class="tableblock halign-left valign-top">label</th>
-<th class="tableblock halign-center valign-top">city</th>
 <th class="tableblock halign-center valign-top">institution_state</th>
-<th class="tableblock halign-center valign-top">inst_level</th>
-<th class="tableblock halign-center valign-top">statefips</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00137000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">University of Colorado Boulder</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Boulder</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">CO</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">08</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All Institutions</p></td>
+<td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00232500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">University of Michigan</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Ann Arbor</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">MI</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in New England Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00309000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ohio State University</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Columbus</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in Middle Atlantic Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in East North Central Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in West North Central Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in South Atlantic Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institutions in East South Central Division</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00214</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HARVARD UNIV SCH PUBLIC HEALTH</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00215</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HARVARD KENNEDY SCHOOL</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00233</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JOHNS HOPKINS UNIV PEABODY CONSERV</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00234</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JOHNS HOPKINS BLOOMBERG SCH OF PH</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00235</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JOHNS HOPKINS UNIV SCH OF MEDICINE</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00254</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LMU  - LOYOLA LAW SCHOOL</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">CA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00306</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OHIO UNIV COLL OF OSTEOPATHIC MED</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">OH</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">39</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00332900</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pennsylvania State University (The)</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">University Park</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PA</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">42</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00389500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">University of Wisconsin - Madison</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Madison</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">WI</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">55</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">00955800</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">University of Texas</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Austin</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">TX</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">I</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">48</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">E00341</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STANFORD UNIVERSITY - STANFORD LAW SCHOO</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">CA</p></td>
 </tr>
 </tbody>
 </table>
@@ -3644,12 +3610,62 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">&#8230;&#8203;</th>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">cipcode</th>
+<th class="tableblock halign-left valign-top">label</th>
+<th class="tableblock halign-left valign-top">CIPDefinition</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All Instructional Programs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All CIP Codes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Agriculture, Agriculture Operations, and Related Sciences</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional programs that focus on agriculture and related sciences and that prepare individuals to apply specific knowledge, methods, and techniques to the management and performance of agricultural operations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Natural Resources and Conservation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional programs that focus on the various natural resources and conservation fields and prepare individuals for related occupations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architecture and Related Services</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional programs that prepare individuals for professional practice in the various architecture-related fields and focus on the study of related aesthetic and socioeconomic aspects of the built environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.XX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Communications Technologies/Technicians and Support Services (Consolidated 10.01-10.99)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional programs that prepare individuals to function as equipment operators, support technicians, and operations managers in the film/video, recording, and graphic communications industries.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Computer and Information Sciences, General</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional content for this group of programs is defined in codes 11.0101 - 11.0199.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Computer Programming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional content for this group of programs is defined in codes 11.0201 - 11.0299.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Processing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional content is defined in code 11.0301.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information Science/Studies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructional content is defined in code 11.0401.</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -3662,13 +3678,11 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 <div class="sect2">
 <h3 id="_grad_cohort">6.16. Grad Cohort</h3>
 <div class="paragraph">
-<p><code>grad_cohort</code> is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <a href="#_grad_cohort_years">Grad Cohort Years</a> variable.</p>
+<p>This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <a href="#_grad_cohort_years">Grad Cohort Years</a> variable.</p>
 </div>
-<div class="exampleblock">
+<div class="listingblock">
 <div class="content">
-<div class="paragraph">
-<p>If <code>grad_cohort</code>=2010 and <code>grad_cohort_years</code>=3, then the cell includes graduates from 2010, 2011, and 2012.</p>
-</div>
+<pre class="highlight"><code>If grad_cohort is 2010 and grad_cohort_years is 3, then the cell includes graduates from (2010, 2011, and 2012).</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3678,7 +3692,15 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 <div class="sect2">
 <h3 id="_grad_cohort_years">6.17. Grad Cohort Years</h3>
 <div class="paragraph">
-<p><code>grad_cohort_years</code> is the number of years in the cohort of reference (see <a href="#_grad_cohort">Grad Cohort</a>). It varies by <a href="#_degree_level">Degree level</a>. Bachelor&#8217;s degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The <code>grad_cohort_years</code> will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in <code>grad_cohort_years</code> when <code>grad_cohort</code>=0000.</p>
+<p>This is the number of years in the cohort of reference (see <a href="#_grad_cohort">Grad Cohort</a>). It varies by degree_level.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>If degree_level=05, grad_cohort_years=3 (3 year cohorts for bachelor's degrees) otherwise, grad_cohort_years=5 (5 year cohorts for all other degrees).</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tabulations are not done across degree types, so grad_cohort_years will be reported when grad_cohort=0000.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3687,7 +3709,7 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 <h4 id="geo_level">6.18.1. <a id="geolevel"></a> Geographic levels</h4>
 <div class="paragraph">
 <p>Geography labels for data files are provided in separate files, by scope. Each file 'label_geograpy_SCOPE.csv' may contain one or more types of records as flagged by <a href="#geolevel">geo_level</a>. For convenience, a composite file containing all geocodes is available as <a href="label_geography.csv" class="bare">label_geography.csv</a>.
-The 2019 vintage of <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">Census TIGER/Line geography</a> is used for all tabulations as of the R2020Q1 release.</p>
+The 2018 vintage of  <a href="https://www.census.gov/geo/maps-data/data/tiger-line.html">Census TIGER/Line geography</a> is used for all tabulations as of the R2019Q1 release.</p>
 </div>
 <div class="paragraph">
 <p>Shapefiles are described in a <a href="lehd_shapefiles.html">separate document</a>.</p>
@@ -3754,8 +3776,7 @@ The 2019 vintage of <a href="https://www.census.gov/geographies/mapping-files/ti
 </div>
 <div class="paragraph">
 <p>The file <a href="label_fipsnum.csv">label_fipsnum.csv</a> contains values and labels
-for all entities of <a href="#geolevel">geo_level</a> 'N' or 'S', and is a summary of separately available files.
-For more information on which states comprise each division, see the map <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf">here</a>.</p>
+for all entities of <a href="#geolevel">geo_level</a> 'N' or 'S', and is a summary of separately available files.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 40%;">
 <colgroup>
@@ -4887,7 +4908,7 @@ available in the PSEO release will be flagged.</p>
 <td class="tableblock halign-center valign-top"><p class="tableblock">A</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -5245,7 +5266,7 @@ available in the PSEO release will be flagged.</p>
 <div class="paragraph">
 <p>For instance, the metadata for the latest_release QWI release of
 Delaware
-(obtained from <a href="https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt">here</a>) has the following content:</p>
+(obtained from <a href="https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt">here</a>) has  the following content:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5415,20 +5436,20 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>2020-06-26: Initial release</p>
+<p>2019-05-16: Initial release</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_version_4_7_0_from_4_6_0_and_4_5_0_draft">9.2. Version 4.7.0 from 4.6.0 and 4.5.0-draft</h3>
+<h3 id="_version_4_5_0_from_4_4_0">9.2. Version 4.5.0 from 4.4.0</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Merge PSEO schema files into official release version</p>
+<p>Added PSEO draft schema csv files</p>
 </li>
 <li>
-<p>Minor formatting changes</p>
+<p>Added PSEO sourcing and documentation</p>
 </li>
 </ul>
 </div>
@@ -5436,7 +5457,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>This revision: Fri Jun 26 15:15:58 UTC 2020</p>
+<p>This revision: Fri 26 Jun 2020 11:09:46 AM EDT</p>
 </div>
 </div>
 </div>
@@ -5446,7 +5467,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-26 15:15:58 UTC
+Last updated 2020-06-26 11:09:46 -0400
 </div>
 </div>
 </body>

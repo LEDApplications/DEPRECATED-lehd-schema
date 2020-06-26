@@ -1,5 +1,5 @@
-= LEHD Public Use Data Schema V4.7.0
-<ces.qwi.feedback@census.gov>
+= LEHD Public Use Data Schema V4.5.0-draft
+Lars Vilhuber <ces.qwi.feedback@census.gov>
 26 June 2020
 // a2x: --dblatex-opts "-P latex.output.revhistory=0 --param toc.section.depth=3"
 :ext-relative: {outfilesuffix}
@@ -35,11 +35,11 @@ This version reimplements some features from  V4.0. Many files compliant with LE
 
 Supersedes
 ----------
-This version supersedes V4.6.0, for files released as of R2020Q1.
+This version supersedes V4.6.0, for files released as of R2019Q1.
 
 Basic Schema
 ------------
-Each data file is structured as a CSV file. The first columns contain <<identifiers>>, subsequent columns contain <<indicators>>, followed by <<statusflags,status flags>>. In some cases, visually formatted Excel (XLSX) files are also available,  containing the same information together with header lines  on each sheet.
+Each data file is structured as a CSV (comma separated values) file. The first columns contain <<identifiers>>, subsequent columns contain <<indicators>>, followed by <<statusflags,status flags>>. In some cases, visually formatted Excel (XLSX) files are also available, containing the same information together with header lines on each sheet. Excel versions may contain labels following each identifier variable, and data may be abridged from the CSV due to size limitations.
 
 === Generic structure
 
@@ -137,7 +137,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI ====
+==== National QWI and state-level QWI (QWIPU) ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width="95%",format="csv",cols="3*^2,<5,<5,<2,<2,^2",options="header"]
@@ -146,7 +146,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates ====
+==== National QWI and state-level QWI rates (QWIPUR) ====
 Rates are computed from published data, and are provided as a convenience.
 
 
@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.aoFlAH[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.8jjiomFslq[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.aoFlAH[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.ekOpGH[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.k8BygtaJ2U[]
 |===================================================
 <<<
 
@@ -462,9 +462,9 @@ Institution identifiers are sourced from the
 https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
 This list has been supplemented with records for regional groupings of institutions.
 
-[width="80%",format="csv",cols="^1,<4,^2,3*^1",options="header"]
+[width="60%",format="csv",cols="^1,<5,^1",options="header"]
 |===================================================
-include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.r1vQ3hcQUC[]
 |===================================================
 
 
@@ -500,23 +500,31 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 
 [width="90%",format="csv",cols="<1,<3,<6",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.IlkaGn[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.3ZnDeaQcUe[]
 |===================================================
 
 
 === Grad Cohort
 
-`grad_cohort` is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable.
+This is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable. 
 
-====
-If `grad_cohort`=2010 and `grad_cohort_years`=3, then the cell includes graduates from 2010, 2011, and 2012.
-====
+[source]
+--
+If grad_cohort is 2010 and grad_cohort_years is 3, then the cell includes graduates from (2010, 2011, and 2012).
+--
 
 When tabulating across all cohorts, the value *0000* will be used for grad_cohort.
 
 === Grad Cohort Years
 
-`grad_cohort_years` is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by <<#_degree_level>>. Bachelor's degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The `grad_cohort_years` will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in `grad_cohort_years` when `grad_cohort`=0000.
+This is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by degree_level.
+
+[source]
+--
+If degree_level=05, grad_cohort_years=3 (3 year cohorts for bachelor's degrees) otherwise, grad_cohort_years=5 (5 year cohorts for all other degrees).
+--
+
+Tabulations are not done across degree types, so grad_cohort_years will be reported when grad_cohort=0000.
 
 === [[geography]]Geography ===
 
@@ -524,7 +532,7 @@ When tabulating across all cohorts, the value *0000* will be used for grad_cohor
 [[geo_level]]
 ==== [[geolevel]] Geographic levels
 Geography labels for data files are provided in separate files, by scope. Each file 'label_geograpy_SCOPE.csv' may contain one or more types of records as flagged by <<geolevel,geo_level>>. For convenience, a composite file containing all geocodes is available as link:label_geography.csv[].
-The 2019 vintage of https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html[Census TIGER/Line geography] is used for all tabulations as of the R2020Q1 release.
+The 2018 vintage of  https://www.census.gov/geo/maps-data/data/tiger-line.html[Census TIGER/Line geography] is used for all tabulations as of the R2019Q1 release.
 
 
 Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate document].
@@ -534,7 +542,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.PLcpbo[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.X4H1Ad9SUF[]
 |===================================================
 
 
@@ -544,7 +552,7 @@ include::/documents/formats/V4.7.0/tmp.PLcpbo[]
 
 The file link:label_fipsnum.csv[label_fipsnum.csv] contains values and labels
 for all entities of <<geolevel,geo_level>> 'N' or 'S', and is a summary of separately available files.
-For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
+
 [width="40%",format="csv",cols="^1,<3,^1",options="header"]
 |===================================================
 include::tmp.csv[]
@@ -568,7 +576,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.pAKmMh[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.e1mGWYzxSr[]
 |===================================================
 
 
@@ -673,7 +681,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.DmmFcb[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.WDKJ6lB3q1[]
 |===================================================
 
 
@@ -712,7 +720,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.aafbPN[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.5.0-draft/tmp.ahDtPM7LoF[]
 |===================================================
 
 
@@ -770,7 +778,7 @@ include::tmp_variables_version.csv[]
 
 For instance, the metadata for the latest_release QWI release of
 Delaware
-(obtained from https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt[here]) has the following content:
+(obtained from https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt[here]) has  the following content:
 --------------------------------
 
 
@@ -827,16 +835,15 @@ include::variables_lags.csv[]
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === This version (revisions)
-- 2020-06-26: Initial release
+- 2019-05-16: Initial release
 
-=== Version 4.7.0 from 4.6.0 and 4.5.0-draft
-- Merge PSEO schema files into official release version
-- Minor formatting changes
-
+=== Version 4.5.0 from 4.4.0
+- Added PSEO draft schema csv files
+- Added PSEO sourcing and documentation
 
 
 <<<
 *******************
-This revision: Fri Jun 26 15:15:58 UTC 2020
+This revision: Fri 26 Jun 2020 11:09:46 AM EDT
 *******************
 

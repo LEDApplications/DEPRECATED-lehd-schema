@@ -1,5 +1,5 @@
-= LEHD Public Use Data Schema V4.7.0
-<ces.qwi.feedback@census.gov>
+= LEHD Public Use Data Schema V4.4.0
+Lars Vilhuber <ces.qwi.feedback@census.gov>
 26 June 2020
 // a2x: --dblatex-opts "-P latex.output.revhistory=0 --param toc.section.depth=3"
 :ext-relative: {outfilesuffix}
@@ -35,7 +35,7 @@ This version reimplements some features from  V4.0. Many files compliant with LE
 
 Supersedes
 ----------
-This version supersedes V4.6.0, for files released as of R2020Q1.
+This version supersedes V4.6.0, for files released as of R2019Q1.
 
 Basic Schema
 ------------
@@ -76,21 +76,11 @@ Identifiers without the year and quarter component can be considered a series id
 Each of the released files has a set of variables uniquely identifying records ('Identifiers'). The table below relates the set of identifier specifications
 to the released files. The actual CSV files containing the identifiers for each set are listed after this table. Each identifier can take on a specified list of values, documented in the section on <<catvars,Categorical Variables>>.
 
-[width="80%",format="csv",cols="<3,8*^1",options="header"]
+[width="80%",format="csv",cols="<3,6*^1",options="header"]
 |===================================================
 include::lehd_mapping_identifiers.csv[]
 |===================================================
 <<<
-
-==== Identifiers for qwi
-( link:lehd_identifiers_qwi.csv[] )
-
-[width="100%",format="csv",cols="2*^1,<3",options="header"]
-|===================================================
-include::lehd_identifiers_qwi.csv[]
-|===================================================
-<<<
-
 
 ==== Identifiers for j2j
 ( link:lehd_identifiers_j2j.csv[] )
@@ -112,12 +102,12 @@ include::lehd_identifiers_j2jod.csv[]
 <<<
 
 
-==== Identifiers for pseo
-( link:lehd_identifiers_pseo.csv[] )
+==== Identifiers for qwi
+( link:lehd_identifiers_qwi.csv[] )
 
 [width="100%",format="csv",cols="2*^1,<3",options="header"]
 |===================================================
-include::lehd_identifiers_pseo.csv[]
+include::lehd_identifiers_qwi.csv[]
 |===================================================
 <<<
 
@@ -137,7 +127,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI ====
+==== National QWI and state-level QWI (QWIPU) ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width="95%",format="csv",cols="3*^2,<5,<5,<2,<2,^2",options="header"]
@@ -146,7 +136,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates ====
+==== National QWI and state-level QWI rates (QWIPUR) ====
 Rates are computed from published data, and are provided as a convenience.
 
 
@@ -189,22 +179,6 @@ include::variables_j2jod.csv[]
 |===================================================
 <<<
 
-
-==== Post-Secondary Employment Outcomes Earnings (PSEOE)
-( link:variables_pseoe.csv[] )
-[width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.aoFlAH[]
-|===================================================
-<<<
-
-
-==== Post-Secondary Employment Outcomes Flows(PSEOF)
-( link:variables_pseof.csv[] )
-[width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.ekOpGH[]
-|===================================================
 <<<
 
 
@@ -440,91 +414,13 @@ include::tmp2.csv[]
 |===================================================
 <<<
 
-
-=== Educational Institution ===
-
-==== Institution Levels
-( link:label_inst_level.csv[] )
-
-Educational institutions are tabulated individually in the current data release.
-Future releases may aggregate to institutions to higher levels, such as state or Census Division.
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_inst_level.csv[]
-|===================================================
-
-
-==== Institution
-( link:label_institution.csv[] )
-
-Institution identifiers are sourced from the
-https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
-This list has been supplemented with records for regional groupings of institutions.
-
-[width="80%",format="csv",cols="^1,<4,^2,3*^1",options="header"]
-|===================================================
-include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
-|===================================================
-
-
-=== Degree level
-( link:label_degree_level.csv[] )
-
-The degree levels are sourced from the
-https://surveys.nces.ed.gov/ipeds/VisInstructions.aspx?survey=10&id=30080&show=part#chunk_1526[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_degree_level.csv[]
-|===================================================
-
-
-=== Classification of Instruction Programs (CIP)
-
-==== CIP levels
-( link:label_cip_level.csv[] )
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_cip_level.csv[]
-|===================================================
-
-
-==== CIP code
-( link:label_cipcode.csv[] )
-
-CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
-Data are reported using 2010 CIP codes, for all years.
-In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
-
-[width="90%",format="csv",cols="<1,<3,<6",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.IlkaGn[]
-|===================================================
-
-
-=== Grad Cohort
-
-`grad_cohort` is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable.
-
-====
-If `grad_cohort`=2010 and `grad_cohort_years`=3, then the cell includes graduates from 2010, 2011, and 2012.
-====
-
-When tabulating across all cohorts, the value *0000* will be used for grad_cohort.
-
-=== Grad Cohort Years
-
-`grad_cohort_years` is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by <<#_degree_level>>. Bachelor's degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The `grad_cohort_years` will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in `grad_cohort_years` when `grad_cohort`=0000.
-
 === [[geography]]Geography ===
 
   
 [[geo_level]]
 ==== [[geolevel]] Geographic levels
 Geography labels for data files are provided in separate files, by scope. Each file 'label_geograpy_SCOPE.csv' may contain one or more types of records as flagged by <<geolevel,geo_level>>. For convenience, a composite file containing all geocodes is available as link:label_geography.csv[].
-The 2019 vintage of https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html[Census TIGER/Line geography] is used for all tabulations as of the R2020Q1 release.
+The 2018 vintage of  https://www.census.gov/geo/maps-data/data/tiger-line.html[Census TIGER/Line geography] is used for all tabulations as of the R2019Q1 release.
 
 
 Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate document].
@@ -534,7 +430,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.PLcpbo[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.4.0/tmp.KNV3pXLi5d[]
 |===================================================
 
 
@@ -544,20 +440,10 @@ include::/documents/formats/V4.7.0/tmp.PLcpbo[]
 
 The file link:label_fipsnum.csv[label_fipsnum.csv] contains values and labels
 for all entities of <<geolevel,geo_level>> 'N' or 'S', and is a summary of separately available files.
-For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
+
 [width="40%",format="csv",cols="^1,<3,^1",options="header"]
 |===================================================
 include::tmp.csv[]
-|===================================================
-
-( link:label_geography_division.csv[] )
-
-The file link:label_geography_division.csv[label_geography_division.csv] contains values and labels
-for all entities of <<geolevel,geo_level>> 'D'.
-
-[width="40%",format="csv",cols="^1,<3,^1",options="header"]
-|===================================================
-include::label_geography_division.csv[]
 |===================================================
 
 ==== [[stusps]]State postal codes
@@ -568,7 +454,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.pAKmMh[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.4.0/tmp.kywUsqZPPG[]
 |===================================================
 
 
@@ -584,7 +470,6 @@ Files of type 'label_geography_[ST].csv' will contain identifiers and labels for
 |===================================================
 Scope,Types,Format file
 US,N,link:label_geography_us.csv[]
-DIVISION,D,link:label_geography_division.csv[]
 METRO,B,link:label_geography_metro.csv[]
 *States*,,
 AK,S C W M,link:label_geography_ak.csv[]
@@ -643,8 +528,6 @@ WY,S C W M,link:label_geography_wy.csv[]
 
 <<<
 === Aggregation level
-
-==== J2J
 ( link:label_agg_level.csv[] )
 
 Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.
@@ -662,8 +545,6 @@ include::variables_agg_level.csv[]
 
 The characteristics available on an aggregation level are repeated using a series of flags following the standard schema:
 
-- <<_cip_levels,cip_level>> - degree field reporting level of table
-- <<_institution_levels,inst_level>> - institution reporting level of table
 - <<geolevel,geo_level>> - geographic level of table
 - <<ind_level,ind_level>> - industry level of table
 - by_ variables - flags indicating other dimensions reported, including ownership, demographics, firm age and size.
@@ -673,46 +554,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.DmmFcb[]
-|===================================================
-
-
-==== PSEO
-( link:label_agg_level_pseo.csv[] )
-
-Measures within the PSEO data product can be tabulated by characteristics of the graduate
-(e.g., institution attended, instructional program, degree level, etc.) and by characteristics of employment
-(state, industry). All measures may not be available on all levels of aggregation - for example,
-earnings variables may not be available when tabulating by place and industry of work, though counts are.
-Every tabulation level is assigned a unique aggregation index, represented by the agg_level_pseo variable.
-This index starts from 1, representing a national level grand total (all institutions, graduates, industries,
-etc.), and progresses through different combinations of characteristics. There are gaps in the progression to
-leave space for aggregation levels that may be included in future data releases. Aggregation levels that are
-available in the PSEO release will be flagged.
-
-The following variables are included in the link:label_agg_level_pseo.csv[] file:
-
-[width="60%",format="csv",cols="<2,<5",options="header"]
-|===================================================
-Variable,Description
-agg_level_pseo, index representing level of aggregation reported on a given record
-grad_char,Characteristics of graduate and program
-firm_char,Characterstics of place of employment
-pseoe,Flag: aggregation level available on PSEO Earnings
-pseof,Flag: aggregation level available on PSEO Flows
-|===================================================
-
-The characteristics available on an aggregation level are repeated using a series of flags following the standard schema:
-
-- <<#_institution_levels,inst_levels>> - institution level of table
-- <<geolevel,geo_level>> - geographic level of table
-- <<ind_level,ind_level>> - industry level of table
-- by_ variables - flags indicating other dimensions reported, including ownership, demographics, firm age and size.
-
-
-[width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.aafbPN[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.4.0/tmp.3cjRKrGzJ1[]
 |===================================================
 
 
@@ -720,14 +562,13 @@ include::/documents/formats/V4.7.0/tmp.aafbPN[]
 == [[statusflags]]Status Flags
 ( link:label_flags.csv[] )
 
-Most indicators in the LEHD data products have associated status flags. Each status flag in the tables above contains one of the following valid values. The values and their interpretation are listed in the tables below. Unless otherwise specified in this section, a status flag will take the values described in 7.1 Standard Status Flags.
-
-=== Standard Status Flags
+Each status flag in the tables above contains one of the following valid values.
+The values and their interpretation are listed in the table below.
 
 [IMPORTANT]
 .Important
 ==============================================
-Note: Currently, the J2J and PSEO tables only contain status flags '-1', '1', '5'. Status flags with values 10 or above only appear in online applications, not in CSV files.
+Note: Currently, the J2J tables only contain status flags '-1', '1', '5'. Status flags with values 10 or above only appear in online applications, not in CSV files.
 ==============================================
 
 
@@ -736,25 +577,13 @@ Note: Currently, the J2J and PSEO tables only contain status flags '-1', '1', '5
 include::label_flags.csv[]
 |===================================================
 
-=== IPEDS Count Status Flag
-( link:label_flags_ipeds_count.csv[] )
-
-Graduate counts are provided from public use data from the https://nces.ed.gov/ipeds/use-the-data[Integrated Postsecondary Education Data System (IPEDS)]. Counts are linked to graduation cohorts in the PSEO data and included in the PSEOE tables. In a small number of cases, misalignment in programs (CIPCODE) is observed between the IPEDS and PSEO counts. In these cases, the IPEDS counts adjusted to be consistent with those on PSEO, and the count is flagged accordingly.
-
-[width="80%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_flags_ipeds_count.csv[]
-|===================================================
-
-
-
 
 <<<
 
 == [[metadata]]Metadata
 ( link:variables_version.csv[] )
 
-=== [[metadataqwij2j]]Version Metadata for QWI, J2J, and PSEO Files (version.txt)
+=== [[metadataqwij2j]]Version Metadata for QWI and J2J Files (version.txt)
 
 Each data release is accompanied by one or more files with metadata on geographic and temporal coverage, in a compact notation. These files follow the following naming convention:
 --------------------------------
@@ -763,35 +592,477 @@ version_[type].txt
 where each component is described in more detail in link:lehd_csv_naming{ext-relative}[].
 
 The contents contains the following elements:
-[width="90%",format="csv",cols="<1,<3,<4",options="header"]
+[width="90%",format="csv",cols="<1,<2,<5",options="header"]
 |===================================================
 include::tmp_variables_version.csv[]
 |===================================================
 
-For instance, the metadata for the latest_release QWI release of
+For instance, the metadata for the R2018Q3 QWI release of
 Delaware
-(obtained from https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt[here]) has the following content:
+(obtained from https://lehd.ces.census.gov/data/qwi/R2018Q3/de/version_qwi.txt[here]) has  the following content:
 --------------------------------
 
 
-QWI_F DE 10 1998:3-2019:3 V4.6.0 R2020Q2 qwipu_de_20200416_0913
-QWI_FA DE 10 1998:3-2017:4 V4.6.0 R2020Q2 qwipu_de_20200416_0913
-QWI_FS DE 10 1998:3-2017:4 V4.6.0 R2020Q2 qwipu_de_20200416_0913
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!--Each page must contain this info, per OMB, update info as neccessary-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"                                              />
+<meta name="DC.title"           content="US Census Bureau Center for Economic Studies Publications and Reports Page" />
+<meta name="DC.description"     content="US Census Bureau, Center for Economic Studies, Longitudinal Employer-Household Dynamics, Local Employment Dynamics, Research Data Centers, Publications and Reports"      />
+<meta name="DC.creator"         content="US Census Bureau Center for Economic Studies,, Phone 301-763-6460"          />
+<meta name="DC.date.created"    scheme="ISO8601" content="2010-01-01"                                                />
+<meta name="DC.date.reviewed"   scheme="ISO8601" content="2010-09-27"                                                />
+<meta name="DC.language"        scheme="DCTERMS.RFC1766" content="EN-US"                                             />
+<meta name="author"             content="US Census Bureau, Center for Economic Studies"                              />
+<meta name="robots"             content="noodp"                                                                      />
+
+
+<title>Page Not Found - Longitudinal Employer-Household Dynamics</title>
+
+	<!-- lehd jquery was clashing with the census header jquery -->
+	<!-- javascript files moved to footer -->
+
+	<!-- CSS Styles --> 
+	<link href="/css/SiteDefined.css" rel="stylesheet" type="text/css"  media="all, handheld" />
+
+	<link href="/css/menus.css" rel="stylesheet" type="text/css" media="all, handheld" />
+
+	<link href="/css/print.css" rel="stylesheet" type="text/css" media="print" />
+
+	<link href="/css/2col.css" rel="stylesheet" type="text/css" media="all, handheld" />
+
+
+
+<div id="page-container">
+
+<!-- SIMPLE HEADER LAST UPDATED 5/6/2020 --> 
+<!-- Used for CSS resets and making rendering consistent across all browsers/devices -->
+<!-- add Universal Federated Analytics -->
+<script language="javascript" id="_fed_an_ua_tag" src="//www.census.gov/main/javascript/federated-analytics-min.js?agency=DOC&subagency=CEN" class="global-file"></script>
+
+<!-- Adding original census.gov css -->
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/bootstrap.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/base.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/extra.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/typeahead.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/header.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="//www.census.gov/main/css/_new/search.css" class="cb-main-support global-file">
+
+<style id="antiClickjack">
+	body{display: none !important}
+</style>
+<script type="text/javascript" src="//www.census.gov/main/javascript/clickjack.js"></script>
+<script src="//www.census.gov/main/responsive-header/jquery/jquery.js" class="cb-main-support global-file"></script>
+<script src="//www.census.gov/main/responsive-header/jquery/jquery-ui.js" class="cb-main-support global-file"></script>
+
+<!-- Check for jquery conflict -->
+<script type="text/javascript">
+	
+    $acn = jQuery.noConflict();
+    if (typeof jQuery === 'undefined' || typeof $ === 'undefined') {
+        jQuery = $acn;
+        $ = $acn;
+    }
+    $(function () {
+        $('.cb-header-skip-nav').click(function () {
+            $('#cb-after-header-anchor').focus();
+        });
+    });
+</script>
+
+<script src="//www.census.gov/main/responsive-header/bootstrap-custom/js/bootstrap.js" class="cb-main-support global-file"></script>
+<script src="//www.census.gov/main/responsive-header/js/typeahead.js" class="cb-main-support global-file"></script>
+
+<!-- Adding DTM --> 
+<script src="//assets.adobedtm.com/526d5084b7f8f688ea81a3aba09755d76a81f8e8/satelliteLib-5b0c69cba9998404374755048324ea6deb6c9db5.js"></script>
+<script type="text/javascript">
+
+// var parser = document.createElement('a');
+// parser.href = "http://example.com:3000/pathname/?search=test#hash";
+
+var digitalData = digitalData || {};
+  digitalData = {
+      "page" : {
+          "pageInfo" : {                
+              "pageName"       : (typeof document.title == 'string') ? document.title : null,
+              "legacyPageName" : null,
+              "pageURL"        : (typeof window.location.href == 'string') ? window.location.href : null,
+              "language"       : "en",
+              "pageTemplate"   : "DPL",
+              "tool"           : "noncms",
+              "siteSection"    : (typeof window.location.pathname == 'string') ? window.location.pathname.split('/').filter(function(e){return e}).shift() : null
+          },
+          "pageTag" : {
+                             
+              
+          }
+      },
+      "event" : {
+        "eventName" : {},
+        "eventInfo" : {
+          "share" : {},
+          "download" : {},
+          "search" : {},
+          "expandCollapseList" : {},
+          "language" : {},
+          "landingPageTab" : {}
+        }
+      }
+  };
+
+  if ( typeof(Storage) !== "undefined" ) {
+    if ( localStorage.getItem("pageLanguage") != null ) {
+      digitalData.event.eventInfo.language.pageLanguage = localStorage.getItem("pageLanguage");
+    }
+    if ( localStorage.getItem("langEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("langEventName");
+    }
+    if ( localStorage.getItem("clickValue") != null ) {
+      digitalData.event.eventInfo.search.clickValue = localStorage.getItem("clickValue");
+    }
+    if ( localStorage.getItem("searchEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("searchEventName");
+    }
+    /*if ( localStorage.getItem("landingPageTabClickValue") != null ) {
+      digitalData.event.eventInfo.landingPageTab.clickValue = localStorage.getItem("landingPageTabClickValue");
+    }*/ 
+    if ( localStorage.getItem("tabEventName") != null ) {
+      digitalData.event.eventName = localStorage.getItem("tabEventName");
+    } 
+    if ( localStorage.getItem("pageName") != null ) {
+      digitalData.page.pageInfo.pageName = localStorage.getItem("pageName");
+    }       
+    //After assigning the value to digitalData, clear the localStorage variable's content
+    localStorage.removeItem("pageLanguage");
+    localStorage.removeItem("langEventName");
+    localStorage.removeItem("clickValue");
+    localStorage.removeItem("searchEventName");
+    localStorage.removeItem("landingPageTabClickValue");
+    localStorage.removeItem("tabEventName");
+    localStorage.removeItem("pageName");
+  } else {
+    if ( getCookie("pageLanguage") != "" ) {
+      digitalData.event.eventInfo.language.pageLanguage = getCookie("pageLanguage");
+    }
+    if ( getCookie("langEventName") != "" ) {
+      digitalData.event.eventName = getCookie("langEventName");
+    }
+    if ( getCookie("clickValue") != "" ) {
+      digitalData.event.eventInfo.search.clickValue = getCookie("clickValue");
+    }
+    if ( getCookie("searchEventName") != "" ) {
+      digitalData.event.eventName = getCookie("searchEventName");
+    }
+    if ( getCookie("landingPageTabClickValue") != "" ) {
+      digitalData.event.eventInfo.landingPageTab.clickValue = getCookie("landingPageTabClickValue");
+    }
+    if ( getCookie("tabEventName") != "" ) {
+      digitalData.event.eventName = getCookie("tabEventName");
+    }
+    if ( getCookie("pageName") != "" ) {
+      digitalData.page.pageInfo.pageName = getCookie("pageName");
+    }
+    //After assigning the value to digitalData, clear the localStorage variable's content
+    setCookie("pageLanguage", "");
+    setCookie("langEventName", "");
+    setCookie("clickValue", "");
+    setCookie("searchEventName", "");
+    setCookie("landingPageTabClickValue", "");
+    setCookie("pageName", "");
+  }
+
+  
+  function setCookie(cname, cvalue, exdays) {
+     var d = new Date();
+     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+     var expires = "expires="+d.toUTCString();
+     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+     var name = cname + "=";
+     var ca = document.cookie.split(';');
+     for(var i = 0; i < ca.length; i++) {
+         var c = ca[i];
+         while (c.charAt(0) == ' ') {
+             c = c.substring(1);
+         }
+         if (c.indexOf(name) == 0) {
+             return c.substring(name.length, c.length);
+         }
+     }
+     return "";
+  }
+</script>
+
+
+<style type="text/css">
+  header.hdr-primary,
+  header.hdr-primary > nav {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 64px !important;
+    background-color: #112e51 !important;
+    border-color: #112e51 !important;
+  }
+  header.hdr-primary > nav > div {
+    box-sizing: border-box !important;
+    height: 36.62px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 30px !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    padding: 0 0 0 16px !important;
+    margin: 0 !important;
+    min-width: 150px !important;
+  }
+  header.hdr-primary > nav > div > a,
+  header.hdr-primary > nav > div > a > img {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-style: none !important;
+    background: transparent !important;
+    text-decoration: none !important;
+  }
+  header.hdr-primary > nav > div > a {  
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+  header.hdr-primary > nav > div > a > img {
+    width: 86px !important;
+    height: 33.62px !important;
+    margin-left: 15px !important;
+  }
+</style>
+<button class="cb-header-skip-nav sr-only sr-only-focusable">Skip to main content</button>
+<header class="hdr-primary">
+  <nav>
+    <div><a href="//www.census.gov" id="census-home-link"><img src="//data.census.gov/cedsci/img/census-logo-white.25c8cb29.svg" alt="United States Census Bureau" title="U.S. Census Bureau"></a></div>
+  </nav>
+</header>
+<a class="sr-only" tabindex="-1" id="cb-after-header-anchor">end of header</a>
+
+
+
+
+<div id="masthead">
+	<h1>Longitudinal Employer-Household Dynamics</h1>
+</div>
+
+<script type="text/javascript" src="/js/breadcrumbs.js"></script>
+
+<span style="height: 0; width: 0;  overflow: hidden;  position: absolute; font-size: 0;"><a href="#SKIP2" title="Skip Navigation">Skip top of page navigation</a></span>
+<div id="dropdown" class="clearfix rMenu-hor rMenu">
+<ul id="middlemenu" class="clearfix rMenu-hor rMenu">
+	<li><a href="/">Main</a></li>
+	<li><a href="/applications/">Applications</a></li>
+	<li><a href="/data/">Data</a></li>
+	<li><a href="/learning/">Learn More</a></li>
+	<li><a href="/research/">Research</a></li>
+	<li><a href="/state_partners/">State Partners</a></li>
+<li><a href="/led_in_action/">LED in Action</a></li>
+</ul>
+</div>
+<!--anti-clickjacking for browsers which don't support X-Frame-Options-->
+<style> html{display:none;} </style>
+<script type="text/javascript">
+if(self == top) {
+document.documentElement.style.display = 'block'; 
+} else {
+top.location = self.location; 
+} 
+</script>
+
+<script type="text/javascript" src="/js/navtabs.js"></script>
+</head>
+
+<body>
+
+<a name="SKIP2"></a>
+<!--horizontal nav end-->
+<!--includes end here-->
+
+<div id="outer-column-container">
+	<div id="inner-column-container">
+		<div id="source-order-container">
+
+
+
+<div id="left-column"><div class="inside">     <div class="navcontainer">         <div id="emergency_notice">             <h3>Alert</h3>              <div class="hi-lite">                 <p>                 </p>             </div>         </div>          <h3>Applications</h3>          <ul class="navlist">  
+
+<li><a href="https://j2jexplorer.ces.census.gov/" target="_blank">J2J Explorer</a></li> 
+
+<li><a href="https://ledextract.ces.census.gov/" target="_blank">LED Extraction Tool</a></li>         
+
+<li><a href="https://onthemap.ces.census.gov/" target="_blank">OnTheMap</a></li>             
+
+<li><a href="https://onthemap.ces.census.gov/em.html" target="_blank">OnTheMap for Emergency Management</a></li>  
+
+<li><a href="/data/pseo_explorer.html" target="_blank">PSEO Explorer</a></li> 
+
+<li><a href="https://qwiexplorer.ces.census.gov/" target="_blank">QWI Explorer</a></li>             
+
+
+<li><a href="/applications/veo" target="_blank">VEO Explorer</a></li> 
+	
+</ul>          <h3>Useful Links</h3>          
+<ul id="useful_links" class="navlist"> 
+            
+<li><a href="https://www.census.gov/programs-surveys/ces.html">Center for Economic Studies</a>
+</li>     
+        
+<li><a href="/data/#j2j">J2J Data</a></li>  
+
+<li><a href="/data/#lodes">LODES Data</a></li> 
+
+<li><a href="/data/pseo_experimental.html">PSEO Data</a></li>  
+
+<li><a href="/data/#qwi">QWI Data</a></li>             
+         
+
+<li><a href="/data/veo_experimental.html">VEO Data</a></li>  
+
+ <li><a href="/learning/#workshop">LED Workshop</a></li> 
+ 
+</ul>          
+
+<h3>Contact Information</h3>          <div id="contact_information" class="hi-lite">             <p>                 Email us:<br/><br/> <a href="mailto:&#67;&#69;&#83;&#46;&#76;&#111;&#99;&#97;&#108;&#46;&#69;&#109;&#112;&#108;&#111;&#121;&#109;&#101;&#110;&#116;&#46;&#68;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#64;&#99;&#101;&#110;&#115;&#117;&#115;&#46;&#103;&#111;&#118;">General</a>
+
+<br />
+<br />
+<a href="mailto:&#67;&#69;&#83;&#46;&#79;&#110;&#84;&#104;&#101;&#77;&#97;&#112;&#46;&#70;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#99;&#101;&#110;&#115;&#117;&#115;&#46;&#103;&#111;&#118;
+">LODES/OnTheMap</a>                 
+
+<br />
+<br />
+<a href="mailto:&#67;&#69;&#83;&#46;&#81;&#87;&#73;&#46;&#70;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#99;&#101;&#110;&#115;&#117;&#115;&#46;&#103;&#111;&#118;
+">QWI/QWI Explorer</a>                 
+
+<br />
+<br />
+<a href="mailto:&#67;&#69;&#83;&#46;&#106;&#50;&#106;&#46;&#70;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#99;&#101;&#110;&#115;&#117;&#115;&#46;&#103;&#111;&#118;
+
+">J2J/J2J Explorer</a>                 
+
+<br /><br />or<br /><br />                 
+
+
+Census Call Center: <a href="tel:3017634636">301-763-INFO (4636)</a> or <a href="tel:8009238282">800-923-8282</a>
+    </p>              
+<p>                 
+<a href="/contact.html">Further contact information</a>                 <br /><br />     
+<a href="/contact.html#partnerwithus">Partner With Us
+</a>  
+<br /><br />     
+            
+<a href="/contact.html#MailingLists">Join an LEHD mailing list</a>             </p>         
+</div>     
+</div> </div>  
+
+
+
+
+
+
+
+</div>
+
+<div id="middle-column">
+  <h3 id="page_header" class="page_header">404 - Page Not Found</h3>
+  <h2>You're way off the map - use the tabs above or panel to the left to navigate</h2>
+  <p>
+  You could also send us a message asking for directions: <a href="mailto:CES.Local.Employment.Dynamics@census.gov">CES.Local.Employment.Dynamics@census.gov</a>
+  </p>
+</div>
+
+</div><!--close source-order-container-->
+</div><!--close inner-column-container-->
+</div><!--close outer-column-container-->
+
+<div class="clear-columns"></div><!--do not delete-->
+
+<div class="pdf">
+	<span id="pdf">
+	[PDF] or <a href="https://www.census.gov/main/www/pdf.html"><img src="/images/pdficon.gif" alt="PDF" width="17" height="17" border="0" /></a>
+	denotes a file in Adobe&rsquo;s <a href="https://www.census.gov/main/www/pdf.html">Portable Document Format</a>.
+	To view the file, you will need the 
+	<a href="http://www.adobe.com/products/acrobat/alternate.html">Adobe&reg; Acrobat&reg; Reader</a>
+	<img class="offsite_image" src="//www.census.gov/main/www/img/offsite.gif" title="This link to a non-federal Web site does not imply endorsement of any particular product, company, or content." alt="This link to a non-federal Web site does not imply endorsement of any particular product, company, or content." />
+ available <strong>free</strong> from Adobe.
+	</span>
+
+	<span id="offsite">
+	This symbol <img src="https://www.census.gov/main/www/img/offsite.gif" width="15" height="12" alt="Off site" />
+	indicates a link to a non-government web site.
+	Our linking to these sites does not constitute an endorsement of any products, services or the information found on them.
+	Once you link to another site you are subject to the policies of the new site.
+	</span>
+</div>
+
+<!-- START CB Footer - Last Revised: 5/27/2020 -->
+
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/footer.css">
+<footer class="footer container-fluid" style="text-align:left;">
+    <div class="row">
+        <div class="grid_footer_links cf">
+        </div>
+
+        <div class="foot_bottom">
+            <div class="foot_bottom_links">
+                <div class="footerbottom">
+					<span style="font: bold x-small Arial, Verdana, sans-serif; color: rgb(231, 240, 244);"><a class="foot_bottom_socialLinks" href="https://www.census.gov/about/contact-us/social_media.html">CONNECT WITH US</a></span>
+                    <a class="foot_bottom_socialLinks" href="https://www.facebook.com/uscensusbureau" target="_blank"><img src="//www.census.gov/main/img/Facebook_White.svg" alt="Facebook logo" title="Facebook" style="padding-right: 3px; padding-left:3px;"/></a>
+                    <a class="foot_bottom_socialLinks" href="https://twitter.com/uscensusbureau" target="_blank"><img src="//www.census.gov/main/img/Twitter_White.svg" alt="Twitter logo" title="Twitter" style="padding-right: 3px"/></a>
+                    <a class="foot_bottom_socialLinks" href="https://www.linkedin.com/company/us-census-bureau" target="_blank"><img src="//www.census.gov/main/img/LinkedIN_White.svg" alt="LinkedIn logo" title="LinkedIn" style="padding-right: 3px"/></a>
+                    <a class="foot_bottom_socialLinks" href="https://www.youtube.com/user/uscensusbureau" target="_blank"><img src="//www.census.gov/main/img/Youtube_White.svg" alt="YouTube logo" title="YouTube" style="padding-right: 3px"/></a>
+                    <a class="foot_bottom_socialLinks" href="https://www.instagram.com/uscensusbureau/" target="_blank"><img src="//www.census.gov/main/img/Instagram_White.svg" alt="Instagram logo" title="Instagram" style="padding-right: 3px"/></a>
+                    <a class="foot_bottom_socialLinks" href="https://public.govdelivery.com/accounts/USCENSUS/subscriber/new" target="_blank"><img src="//www.census.gov/main/img/Mail_White.svg" alt="Email Updates logo" title="Email Updates" style="padding-right: 3px"/></a>
+
+                    <ul class="legal-menu">
+                        <li><a href="https://www.census.gov/about/policies/privacy/privacy-policy.html#accessibility">Accessibility</a></li>
+                        <li><a href="https://www.census.gov/quality/">Information Quality</a></li>
+                        <li><a href="https://www.census.gov/foia/">FOIA</a></li>
+                        <li><a href="https://www.census.gov/privacy/">Data Protection and Privacy Policy</a></li>
+                        <li><a href="https://www.commerce.gov/">U.S. Department of Commerce</a></li>
+                    </ul>
+                </div> <!-- end class=footerbotom -->
+            </div> <!-- end class=foot_bottom_links -->
+        </div> <!-- end class=grid_footer_links -->
+    </div>
+</footer> <!-- end class=footer -->
+
+
+
+<!--close page container div-->
+</div>
+<!-- Begin Javascript Links -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/js.js?
+124
+"></script>
+<script type="text/javascript" src="/js/xdr.js"></script>
+<!--End JavaScript Links-->
+
+
+
+</body>
+</html>
 --------------------------------
-Similarly, the metadata for the latest_release release of
+Similarly, the metadata for the R2018Q2 release of
 Delaware J2J
-tabulations (obtained from https://lehd.ces.census.gov/data/j2j/latest_release/de/j2j/version_j2j.txt[here]) has  the following content:
+tabulations (obtained from https://lehd.ces.census.gov/data/j2j/R2018Q2/de/j2j/version_j2j.txt[here]) has  the following content:
 --------------------------------
-J2J DE 10 2000:2-2019:2 V4.6.0 R2020Q2 j2jpu_de_20200620_0943
+J2J DE 10 2000:2-2017:2 V4.2.0 R2018Q2 j2jpu_de_20180817_1654
 --------------------------------
 Some J2J metadata may contain multiple lines, as necessary.
-
-The PSEO metadata will contain separate lines for the PSEOE and PSEOF tables. The year range for PSEO tables is based on the <<#_grad_cohort>>, the start year of the graduation cohort. An example for Colorado institutions has the following content:
-
---------------------------------
-PSEOE CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839
-PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839
---------------------------------
 
 === [[metadataj2jod]]Additional Metadata for J2JOD Files (avail.csv)
 (link:variables_avail.csv[])
@@ -827,16 +1098,19 @@ include::variables_lags.csv[]
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === This version (revisions)
-- 2020-06-26: Initial release
+- 2019-02-21: Initial release
+- 2019-03-31: Minor layout changes for better readability
 
-=== Version 4.7.0 from 4.6.0 and 4.5.0-draft
-- Merge PSEO schema files into official release version
-- Minor formatting changes
-
+=== Version 4.4.0 from 4.3.1
+- Underlying geovintage updated to reflect 2018 census geography
+- Updated shapefiles based on TIGER 2018
+- PR geography labels added
+- Added state part to non-metro/non-micro areas in state label files
+- Removed nonexistent VT geography from labels
 
 
 <<<
 *******************
-This revision: Fri Jun 26 15:15:58 UTC 2020
+This revision: Fri 26 Jun 2020 11:08:21 AM EDT
 *******************
 

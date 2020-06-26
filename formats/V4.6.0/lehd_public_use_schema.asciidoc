@@ -1,4 +1,4 @@
-= LEHD Public Use Data Schema V4.7.0
+= LEHD Public Use Data Schema V4.6.0
 <ces.qwi.feedback@census.gov>
 26 June 2020
 // a2x: --dblatex-opts "-P latex.output.revhistory=0 --param toc.section.depth=3"
@@ -35,7 +35,7 @@ This version reimplements some features from  V4.0. Many files compliant with LE
 
 Supersedes
 ----------
-This version supersedes V4.6.0, for files released as of R2020Q1.
+This version supersedes V4.4.0, for files released as of R2020Q1.
 
 Basic Schema
 ------------
@@ -76,21 +76,11 @@ Identifiers without the year and quarter component can be considered a series id
 Each of the released files has a set of variables uniquely identifying records ('Identifiers'). The table below relates the set of identifier specifications
 to the released files. The actual CSV files containing the identifiers for each set are listed after this table. Each identifier can take on a specified list of values, documented in the section on <<catvars,Categorical Variables>>.
 
-[width="80%",format="csv",cols="<3,8*^1",options="header"]
+[width="80%",format="csv",cols="<3,6*^1",options="header"]
 |===================================================
 include::lehd_mapping_identifiers.csv[]
 |===================================================
 <<<
-
-==== Identifiers for qwi
-( link:lehd_identifiers_qwi.csv[] )
-
-[width="100%",format="csv",cols="2*^1,<3",options="header"]
-|===================================================
-include::lehd_identifiers_qwi.csv[]
-|===================================================
-<<<
-
 
 ==== Identifiers for j2j
 ( link:lehd_identifiers_j2j.csv[] )
@@ -112,12 +102,12 @@ include::lehd_identifiers_j2jod.csv[]
 <<<
 
 
-==== Identifiers for pseo
-( link:lehd_identifiers_pseo.csv[] )
+==== Identifiers for qwi
+( link:lehd_identifiers_qwi.csv[] )
 
 [width="100%",format="csv",cols="2*^1,<3",options="header"]
 |===================================================
-include::lehd_identifiers_pseo.csv[]
+include::lehd_identifiers_qwi.csv[]
 |===================================================
 <<<
 
@@ -137,7 +127,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI ====
+==== National QWI and state-level QWI (QWIPU) ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width="95%",format="csv",cols="3*^2,<5,<5,<2,<2,^2",options="header"]
@@ -146,7 +136,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates ====
+==== National QWI and state-level QWI rates (QWIPUR) ====
 Rates are computed from published data, and are provided as a convenience.
 
 
@@ -189,22 +179,6 @@ include::variables_j2jod.csv[]
 |===================================================
 <<<
 
-
-==== Post-Secondary Employment Outcomes Earnings (PSEOE)
-( link:variables_pseoe.csv[] )
-[width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.aoFlAH[]
-|===================================================
-<<<
-
-
-==== Post-Secondary Employment Outcomes Flows(PSEOF)
-( link:variables_pseof.csv[] )
-[width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.ekOpGH[]
-|===================================================
 <<<
 
 
@@ -440,84 +414,6 @@ include::tmp2.csv[]
 |===================================================
 <<<
 
-
-=== Educational Institution ===
-
-==== Institution Levels
-( link:label_inst_level.csv[] )
-
-Educational institutions are tabulated individually in the current data release.
-Future releases may aggregate to institutions to higher levels, such as state or Census Division.
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_inst_level.csv[]
-|===================================================
-
-
-==== Institution
-( link:label_institution.csv[] )
-
-Institution identifiers are sourced from the
-https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
-This list has been supplemented with records for regional groupings of institutions.
-
-[width="80%",format="csv",cols="^1,<4,^2,3*^1",options="header"]
-|===================================================
-include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
-|===================================================
-
-
-=== Degree level
-( link:label_degree_level.csv[] )
-
-The degree levels are sourced from the
-https://surveys.nces.ed.gov/ipeds/VisInstructions.aspx?survey=10&id=30080&show=part#chunk_1526[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_degree_level.csv[]
-|===================================================
-
-
-=== Classification of Instruction Programs (CIP)
-
-==== CIP levels
-( link:label_cip_level.csv[] )
-
-[width="60%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_cip_level.csv[]
-|===================================================
-
-
-==== CIP code
-( link:label_cipcode.csv[] )
-
-CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
-Data are reported using 2010 CIP codes, for all years.
-In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
-
-[width="90%",format="csv",cols="<1,<3,<6",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.IlkaGn[]
-|===================================================
-
-
-=== Grad Cohort
-
-`grad_cohort` is a 4-digit number representing the first year of the graduation cohort. The number of years in the cohort is reported in the separate <<#_grad_cohort_years>> variable.
-
-====
-If `grad_cohort`=2010 and `grad_cohort_years`=3, then the cell includes graduates from 2010, 2011, and 2012.
-====
-
-When tabulating across all cohorts, the value *0000* will be used for grad_cohort.
-
-=== Grad Cohort Years
-
-`grad_cohort_years` is the number of years in the cohort of reference (see <<#_grad_cohort>>). It varies by <<#_degree_level>>. Bachelor's degrees (05) are reported in 3 year cohorts, all other degrees are reported in 5 year cohorts. The `grad_cohort_years` will take a value (3,5). As tabulations are not done across degree types, the appropriate value will be reported in `grad_cohort_years` when `grad_cohort`=0000.
-
 === [[geography]]Geography ===
 
   
@@ -534,7 +430,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.PLcpbo[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.6.0/tmp.eCQMG2Qrqt[]
 |===================================================
 
 
@@ -544,20 +440,10 @@ include::/documents/formats/V4.7.0/tmp.PLcpbo[]
 
 The file link:label_fipsnum.csv[label_fipsnum.csv] contains values and labels
 for all entities of <<geolevel,geo_level>> 'N' or 'S', and is a summary of separately available files.
-For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
+
 [width="40%",format="csv",cols="^1,<3,^1",options="header"]
 |===================================================
 include::tmp.csv[]
-|===================================================
-
-( link:label_geography_division.csv[] )
-
-The file link:label_geography_division.csv[label_geography_division.csv] contains values and labels
-for all entities of <<geolevel,geo_level>> 'D'.
-
-[width="40%",format="csv",cols="^1,<3,^1",options="header"]
-|===================================================
-include::label_geography_division.csv[]
 |===================================================
 
 ==== [[stusps]]State postal codes
@@ -568,7 +454,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.pAKmMh[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.6.0/tmp.d9wLSLmPwT[]
 |===================================================
 
 
@@ -584,7 +470,6 @@ Files of type 'label_geography_[ST].csv' will contain identifiers and labels for
 |===================================================
 Scope,Types,Format file
 US,N,link:label_geography_us.csv[]
-DIVISION,D,link:label_geography_division.csv[]
 METRO,B,link:label_geography_metro.csv[]
 *States*,,
 AK,S C W M,link:label_geography_ak.csv[]
@@ -643,8 +528,6 @@ WY,S C W M,link:label_geography_wy.csv[]
 
 <<<
 === Aggregation level
-
-==== J2J
 ( link:label_agg_level.csv[] )
 
 Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.
@@ -662,8 +545,6 @@ include::variables_agg_level.csv[]
 
 The characteristics available on an aggregation level are repeated using a series of flags following the standard schema:
 
-- <<_cip_levels,cip_level>> - degree field reporting level of table
-- <<_institution_levels,inst_level>> - institution reporting level of table
 - <<geolevel,geo_level>> - geographic level of table
 - <<ind_level,ind_level>> - industry level of table
 - by_ variables - flags indicating other dimensions reported, including ownership, demographics, firm age and size.
@@ -673,46 +554,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.DmmFcb[]
-|===================================================
-
-
-==== PSEO
-( link:label_agg_level_pseo.csv[] )
-
-Measures within the PSEO data product can be tabulated by characteristics of the graduate
-(e.g., institution attended, instructional program, degree level, etc.) and by characteristics of employment
-(state, industry). All measures may not be available on all levels of aggregation - for example,
-earnings variables may not be available when tabulating by place and industry of work, though counts are.
-Every tabulation level is assigned a unique aggregation index, represented by the agg_level_pseo variable.
-This index starts from 1, representing a national level grand total (all institutions, graduates, industries,
-etc.), and progresses through different combinations of characteristics. There are gaps in the progression to
-leave space for aggregation levels that may be included in future data releases. Aggregation levels that are
-available in the PSEO release will be flagged.
-
-The following variables are included in the link:label_agg_level_pseo.csv[] file:
-
-[width="60%",format="csv",cols="<2,<5",options="header"]
-|===================================================
-Variable,Description
-agg_level_pseo, index representing level of aggregation reported on a given record
-grad_char,Characteristics of graduate and program
-firm_char,Characterstics of place of employment
-pseoe,Flag: aggregation level available on PSEO Earnings
-pseof,Flag: aggregation level available on PSEO Flows
-|===================================================
-
-The characteristics available on an aggregation level are repeated using a series of flags following the standard schema:
-
-- <<#_institution_levels,inst_levels>> - institution level of table
-- <<geolevel,geo_level>> - geographic level of table
-- <<ind_level,ind_level>> - industry level of table
-- by_ variables - flags indicating other dimensions reported, including ownership, demographics, firm age and size.
-
-
-[width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
-|===================================================
-include::/documents/formats/V4.7.0/tmp.aafbPN[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.6.0/tmp.7bm68EU2bD[]
 |===================================================
 
 
@@ -720,14 +562,13 @@ include::/documents/formats/V4.7.0/tmp.aafbPN[]
 == [[statusflags]]Status Flags
 ( link:label_flags.csv[] )
 
-Most indicators in the LEHD data products have associated status flags. Each status flag in the tables above contains one of the following valid values. The values and their interpretation are listed in the tables below. Unless otherwise specified in this section, a status flag will take the values described in 7.1 Standard Status Flags.
-
-=== Standard Status Flags
+Each status flag in the tables above contains one of the following valid values.
+The values and their interpretation are listed in the table below.
 
 [IMPORTANT]
 .Important
 ==============================================
-Note: Currently, the J2J and PSEO tables only contain status flags '-1', '1', '5'. Status flags with values 10 or above only appear in online applications, not in CSV files.
+Note: Currently, the J2J tables only contain status flags '-1', '1', '5'. Status flags with values 10 or above only appear in online applications, not in CSV files.
 ==============================================
 
 
@@ -736,25 +577,13 @@ Note: Currently, the J2J and PSEO tables only contain status flags '-1', '1', '5
 include::label_flags.csv[]
 |===================================================
 
-=== IPEDS Count Status Flag
-( link:label_flags_ipeds_count.csv[] )
-
-Graduate counts are provided from public use data from the https://nces.ed.gov/ipeds/use-the-data[Integrated Postsecondary Education Data System (IPEDS)]. Counts are linked to graduation cohorts in the PSEO data and included in the PSEOE tables. In a small number of cases, misalignment in programs (CIPCODE) is observed between the IPEDS and PSEO counts. In these cases, the IPEDS counts adjusted to be consistent with those on PSEO, and the count is flagged accordingly.
-
-[width="80%",format="csv",cols="^1,<4",options="header"]
-|===================================================
-include::label_flags_ipeds_count.csv[]
-|===================================================
-
-
-
 
 <<<
 
 == [[metadata]]Metadata
 ( link:variables_version.csv[] )
 
-=== [[metadataqwij2j]]Version Metadata for QWI, J2J, and PSEO Files (version.txt)
+=== [[metadataqwij2j]]Version Metadata for QWI and J2J Files (version.txt)
 
 Each data release is accompanied by one or more files with metadata on geographic and temporal coverage, in a compact notation. These files follow the following naming convention:
 --------------------------------
@@ -763,14 +592,14 @@ version_[type].txt
 where each component is described in more detail in link:lehd_csv_naming{ext-relative}[].
 
 The contents contains the following elements:
-[width="90%",format="csv",cols="<1,<3,<4",options="header"]
+[width="90%",format="csv",cols="<1,<2,<5",options="header"]
 |===================================================
 include::tmp_variables_version.csv[]
 |===================================================
 
-For instance, the metadata for the latest_release QWI release of
+For instance, the metadata for a recent QWI release of 
 Delaware
-(obtained from https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt[here]) has the following content:
+(the latest can be viewed https://lehd.ces.census.gov/data/qwi/latest_release/de/version_qwi.txt[here]) has the following content:
 --------------------------------
 
 
@@ -778,20 +607,13 @@ QWI_F DE 10 1998:3-2019:3 V4.6.0 R2020Q2 qwipu_de_20200416_0913
 QWI_FA DE 10 1998:3-2017:4 V4.6.0 R2020Q2 qwipu_de_20200416_0913
 QWI_FS DE 10 1998:3-2017:4 V4.6.0 R2020Q2 qwipu_de_20200416_0913
 --------------------------------
-Similarly, the metadata for the latest_release release of
+Similarly, the metadata for a recent release of 
 Delaware J2J
-tabulations (obtained from https://lehd.ces.census.gov/data/j2j/latest_release/de/j2j/version_j2j.txt[here]) has  the following content:
+tabulations (the latest can be viewed https://lehd.ces.census.gov/data/j2j/latest_release/de/j2j/version_j2j.txt[here]) has  the following content:
 --------------------------------
 J2J DE 10 2000:2-2019:2 V4.6.0 R2020Q2 j2jpu_de_20200620_0943
 --------------------------------
 Some J2J metadata may contain multiple lines, as necessary.
-
-The PSEO metadata will contain separate lines for the PSEOE and PSEOF tables. The year range for PSEO tables is based on the <<#_grad_cohort>>, the start year of the graduation cohort. An example for Colorado institutions has the following content:
-
---------------------------------
-PSEOE CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839
-PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839
---------------------------------
 
 === [[metadataj2jod]]Additional Metadata for J2JOD Files (avail.csv)
 (link:variables_avail.csv[])
@@ -827,16 +649,17 @@ include::variables_lags.csv[]
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === This version (revisions)
-- 2020-06-26: Initial release
+- 2020-01-21: Initial release
 
-=== Version 4.7.0 from 4.6.0 and 4.5.0-draft
-- Merge PSEO schema files into official release version
-- Minor formatting changes
+=== Version 4.6.0 from 4.4.0
+- Underlying geovintage updated to reflect 2019 census geography
+- Updated shapefiles based on TIGER 2019
+- Added documentation of new J2J Earnings indicators (coming soon in next release of J2J data)
 
 
 
 <<<
 *******************
-This revision: Fri Jun 26 15:15:58 UTC 2020
+This revision: Fri 26 Jun 2020 11:11:13 AM EDT
 *******************
 

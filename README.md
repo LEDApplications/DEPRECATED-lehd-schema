@@ -16,7 +16,7 @@ You can browse the following schemas (in reverse chronological order of major ve
 * V4.6 versions
     * [V4.6.0](https://ledapplications.github.io/lehd-schema/formats/V4.6.0/lehd_public_use_schema.html): The released V4.6.0 version.
 * V4.5 versions
-    * [V4.5.0-draft](https://ledapplications.github.io/lehd-schema/formats/V4.5.0-draft/lehd_public_use_schema.html): Draft V4.5.0 version (will be removed once released).
+    * [V4.5.0-draft](https://ledapplications.github.io/lehd-schema/formats/V4.5.0-draft/lehd_public_use_schema.html): Draft V4.5.0 version.
 * V4.4 versions
     * [V4.4.0](https://ledapplications.github.io/lehd-schema/formats/V4.4.0/lehd_public_use_schema.html): The released V4.4.0 version.
 * V4.3 versions

@@ -38,4 +38,4 @@ You can browse the following schemas (in reverse chronological order of major ve
 * [v3.5](https://ledapplications.github.io/lehd-schema/formats/v3.5): Simply a store (incomplete) of the previous version.
 
 
-If you are not already there, you might find that browsing [http://labordynamicsinstitute.github.io/qwi_schemas/](http://labordynamicsinstitute.github.io/qwi_schemas/) is easier.
+If you are not already there, you might find that browsing [https://ledapplications.github.io/lehd-schema/](https://ledapplications.github.io/lehd-schema/) is easier.

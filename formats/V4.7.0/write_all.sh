@@ -8,7 +8,7 @@ echo "
 	will build the format documentation from CSV files and a template.
   for all docs
 
-	Version = cornell|draft|official changes a note in the document
+	Version = draft|official changes a note in the document
 	"
 	exit 1
 fi

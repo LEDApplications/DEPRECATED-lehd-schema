@@ -7,6 +7,13 @@
 
 
 
+[IMPORTANT]
+.Important
+==============================================
+This specification is draft. Feedback is welcome. Please write us at link:mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema_draft[ces.qwi.feedback@census.gov].
+==============================================
+	
+
 Purpose
 -------
 The public-use data from the Longitudinal Employer-Household Dynamics Program, including the Quarterly Workforce Indicators (QWI)
@@ -225,6 +232,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-This revision: Fri Jun 26 15:19:59 UTC 2020
+This revision: Fri Jun 26 20:13:47 UTC 2020
 *******************
 

@@ -636,7 +636,6 @@ echo "
 
 The file link:$nsfile[$nsfile] contains values and labels
 for all entities of <<geolevel,geo_level>> 'N' or 'S', and is a summary of separately available files.
-For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
 [width=\"40%\",format=\"csv\",cols=\"^1,<3,^1\",options=\"header\"]
 |===================================================
 include::tmp.csv[]
@@ -645,7 +644,7 @@ include::tmp.csv[]
 ( link:label_geography_division.csv[] )
 
 The file link:label_geography_division.csv[label_geography_division.csv] contains values and labels
-for all entities of <<geolevel,geo_level>> 'D'.
+for all entities of <<geolevel,geo_level>> 'D'. For more information on which states comprise each division, see the map https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf[here].
 
 [width=\"40%\",format=\"csv\",cols=\"^1,<3,^1\",options=\"header\"]
 |===================================================

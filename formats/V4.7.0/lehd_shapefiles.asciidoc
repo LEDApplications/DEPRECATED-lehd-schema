@@ -9,7 +9,7 @@
 [IMPORTANT]
 .Important
 ==============================================
-This specification is draft. Feedback is welcome. 	
+Feedback is welcome. 	
 Please write us at
 link:mailto:ces.qwi.feedback@census.gov?subject=LEHD_Shapefiles[ces.qwi.feedback@census.gov].
 ==============================================
@@ -163,6 +163,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Fri 26 Jun 2020 11:12:25 AM EDT
+This revision: Fri 26 Jun 2020 04:09:35 PM EDT
 *******************
 

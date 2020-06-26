@@ -3,14 +3,15 @@
 # config
 FILES=$(pwd $0)/formats
 GLOBALSH=write_all.sh
-# Change this to 'lehd' to finalize
-[[ -z $1 ]] && BRANCH=master || BRANCH=$1
-case $BRANCH in
-    lehd-deploy|LEHD-DEPLOY)
+
+# gh-pages gets tagged with a draft, master gets official
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+case $current_branch in
+    master)
         VERSION=official
         ;;
     *)
-        VERSION=lehd
+        VERSION=draft
         ;;
 esac
 

@@ -10,7 +10,7 @@
 [IMPORTANT]
 .Important
 ==============================================
-This specification is draft. Feedback is welcome. Please write us at link:mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema_draft[ces.qwi.feedback@census.gov].
+Feedback is welcome. Please write us at link:mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema[ces.qwi.feedback@census.gov].
 ==============================================
 	
 
@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.CvE7OSwTOn[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.lA02GiPIjf[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.CvE7OSwTOn[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.afohWWO7TS[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.NYsmxMDwGC[]
 |===================================================
 <<<
 
@@ -500,7 +500,7 @@ In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CI
 
 [width="90%",format="csv",cols="<1,<3,<6",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.5ti5dFAW7p[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.xfLHtK7iFq[]
 |===================================================
 
 
@@ -534,7 +534,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.a0hHFgKULT[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.mTKYefdSQc[]
 |===================================================
 
 
@@ -568,7 +568,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.ln0yCLbEiI[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.oroo83IPAd[]
 |===================================================
 
 
@@ -673,7 +673,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.rdhKiIN41x[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.vh2sXhn3Zi[]
 |===================================================
 
 
@@ -712,7 +712,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.mc6wAQuqR5[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.Bmt6dZYFRJ[]
 |===================================================
 
 
@@ -837,6 +837,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Fri 26 Jun 2020 11:12:21 AM EDT
+This revision: Fri 26 Jun 2020 04:09:32 PM EDT
 *******************
 

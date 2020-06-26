@@ -9,7 +9,7 @@ echo "
 
 	will build the format documentation from CSV files and a template.
 
-	Version = cornell|draft|official changes a note in the document
+	Version = draft|official changes a note in the document
 	"
 	exit 1
 fi
@@ -17,15 +17,12 @@ fi
 if [[ "$1" = "start" ]]
 then
 # parse version from directory
-   version=cornell
+   version=draft
 else
    version=$1
 fi
 case $version in
-	cornell)
-	author=lars.vilhuber@cornell.edu
-	;;
-	official|lehd|draft|*)
+	official|draft)
 	author=ces.qwi.feedback@census.gov
 	;;
 esac
@@ -45,16 +42,7 @@ echo "$(date +%d\ %B\ %Y)
 " >> $asciifile
 # A note on the relevance/beta/draft status of this file.
 case $version in
-	cornell)
-	echo "
-[IMPORTANT]
-.Important
-==============================================
-This document is not an official Census Bureau publication. It is compiled from publicly accessible information
-by Lars Vilhuber (https://www.ilr.cornell.edu/ldi/[Labor Dynamics Institute, Cornell University]).
-Feedback is welcome. " >> $asciifile
-	;;
-	draft|*)
+	draft)
 	echo "
 [IMPORTANT]
 .Important

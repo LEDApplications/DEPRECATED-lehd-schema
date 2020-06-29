@@ -533,7 +533,7 @@ echo "...,," >> $tmp_cip_rows
 head -100 $tmp_cip_cols | tail -5  >> $tmp_cip_rows
 echo "...,," >> $tmp_cip_rows
 echo "
-==== CIP code
+==== 2020 CIP Codes
 ( link:label_cipcode.csv[] )
 
 CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].

@@ -165,7 +165,7 @@ include::naming_geocat.csv[]
 === [[format]] FORMAT
 ( link:variables_shp.csv[variables_shp.csv] )
 
-Files are distributed as https://www.digitalpreservation.gov/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.digitalpreservation.gov/formats/fdd/fdd000280.shtml .
+Files are distributed as https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.digitalpreservation.gov/formats/fdd/fdd000280.shtml .
 
 [width="60%",format="csv",cols="<2,<2,<5,<5",options="header"]
 |===================================================
@@ -176,7 +176,7 @@ include::variables_shp.csv[]
 ==== STUSPS
 ( link:label_stusps.csv[] )
 
-FIPS State Postal Code as per https://www.census.gov/geo/reference/codes/cou.html
+FIPS State Postal Code as per https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html
 
 ==== GEOGRAPHY
 ( link:label_geography.csv[] )
@@ -206,7 +206,7 @@ No transformations occur to this layer other than those listed above.
 
 * All features are split into state-specific CBSA features by intersecting each feature with the state shapefile features.
 * The STUSPS field is added during the intersect with the state shapefile.
-* STFIPS (i.e. FIPS State Code as per https://www.census.gov/geo/reference/ansi_statetables.html) is prepended to the CBSA code (https://www.census.gov/population/metro/data/def.html) to create the GEOGRAPHY field to distinguish state-parts of the same CBSA (i.e. make them nationally unique).
+* STFIPS (i.e. FIPS State Code as per https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html) is prepended to the CBSA code (https://www.census.gov/programs-surveys/metro-micro.html) to create the GEOGRAPHY field to distinguish state-parts of the same CBSA (i.e. make them nationally unique).
 * The text "([STUSPS] part)" is appended to the NAME field only for those CBSA features that are split by state lines.
 
 ==== Workforce Investment Board Areas

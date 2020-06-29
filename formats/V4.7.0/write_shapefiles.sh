@@ -165,7 +165,7 @@ include::naming_geocat.csv[]
 === [[format]] FORMAT
 ( link:variables_shp.csv[variables_shp.csv] )
 
-Files are distributed as https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.digitalpreservation.gov/formats/fdd/fdd000280.shtml .
+Files are distributed as https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml .
 
 [width="60%",format="csv",cols="<2,<2,<5,<5",options="header"]
 |===================================================

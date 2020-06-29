@@ -487,7 +487,7 @@ echo "
 ( link:label_institution.csv[] )
 
 Institution identifiers are sourced from the
-https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp[U.S. Department of Education, Federal Student Aid office].
+https://www2.ed.gov/offices/OSFAP/PEPS/dataextracts.html[U.S. Department of Education, Federal Student Aid office].
 This list has been supplemented with records for regional groupings of institutions.
 
 [width=\"80%\",format=\"csv\",cols=\"^1,<4,^2,3*^1\",options=\"header\"]

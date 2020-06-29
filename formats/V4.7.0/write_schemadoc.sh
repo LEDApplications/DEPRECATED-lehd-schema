@@ -521,17 +521,6 @@ include::label_cip_level.csv[]
 |===================================================
 " >> $asciifile
 
-tmp_cip_cols=$(mktemp -p $cwd)
-tmp_cip_rows=$(mktemp -p $cwd)
-# use python to parse mixed quote csvs
-python -c 'import sys,csv
-w = csv.writer(sys.stdout)
-for row in csv.reader(sys.stdin):
-    w.writerow((row[0],row[1],row[4]))' < label_cipcode.csv > $tmp_cip_cols
-head -5 $tmp_cip_cols > $tmp_cip_rows
-echo "...,," >> $tmp_cip_rows
-head -100 $tmp_cip_cols | tail -5  >> $tmp_cip_rows
-echo "...,," >> $tmp_cip_rows
 echo "
 ==== 2020 CIP Codes
 ( link:label_cipcode.csv[] )
@@ -540,9 +529,9 @@ CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Cente
 Data are reported using 2010 CIP codes, for all years.
 In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
 
-[width=\"90%\",format=\"csv\",cols=\"<1,<3,<6\",options=\"header\"]
+[width=\"90%\",format=\"csv\",cols=\"^1,<2,^1,^1,<6\",options=\"header\"]
 |===================================================
-include::$tmp_cip_rows[]
+include::label_cipcode.csv[lines=1;2;3;4;5;117;118]
 |===================================================
 " >> $asciifile
 

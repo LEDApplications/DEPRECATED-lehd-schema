@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.KifBKe[]
+include::/documents/formats/V4.7.0/tmp.FkIbhI[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.KifBKe[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.KIMAjD[]
+include::/documents/formats/V4.7.0/tmp.DbKAOI[]
 |===================================================
 <<<
 
@@ -491,11 +491,11 @@ include::label_cip_level.csv[]
 |===================================================
 
 
-==== 2020 CIP Codes
+==== CIP Codes
 ( link:label_cipcode.csv[] )
 
 CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
-Data are reported using 2010 CIP codes, for all years.
+Data are reported using 2020 CIP codes, for all years.
 In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
 
 [width="90%",format="csv",cols="^1,<2,^1,^1,<6",options="header"]
@@ -534,7 +534,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.HOpPNi[]
+include::/documents/formats/V4.7.0/tmp.FjmCiL[]
 |===================================================
 
 
@@ -567,7 +567,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.JJgPeo[]
+include::/documents/formats/V4.7.0/tmp.BacmFG[]
 |===================================================
 
 
@@ -672,7 +672,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.gOGpPD[]
+include::/documents/formats/V4.7.0/tmp.ipPEaJ[]
 |===================================================
 
 
@@ -711,7 +711,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.ADMJme[]
+include::/documents/formats/V4.7.0/tmp.BameED[]
 |===================================================
 
 
@@ -841,6 +841,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Tue Jun 30 20:59:28 UTC 2020
+This revision: Tue Jun 30 21:37:07 UTC 2020
 *******************
 

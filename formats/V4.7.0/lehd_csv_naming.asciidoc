@@ -219,10 +219,14 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 === This version (revisions)
 - 2020-06-26: Initial release
 
-=== Version 4.7.0 from 4.6.0 and 4.5.0-draft
+=== Changes from 4.6.0
 - Merge PSEO schema files into official release version
 - Minor formatting changes
 
+=== Changes from 4.5.0-draft
+- Additional status flags on PSEO Earnings
+- Additional measures on PSEO Flows to report unobserved/marginally employed
+- Earnings reported at 2-digit CIPCODE level
 
 [IMPORTANT]
 .Important
@@ -232,6 +236,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-This revision: Tue Jun 30 19:35:10 UTC 2020
+This revision: Tue Jun 30 20:52:22 UTC 2020
 *******************
 

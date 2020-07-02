@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.FIEKjE[]
+include::/documents/formats/V4.7.0/tmp.komIFJ[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.FIEKjE[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.cOooDm[]
+include::/documents/formats/V4.7.0/tmp.lMjgBP[]
 |===================================================
 <<<
 
@@ -464,7 +464,10 @@ This list has been supplemented with records for regional groupings of instituti
 
 [width="80%",format="csv",cols="^1,<4,^2,3*^1",options="header"]
 |===================================================
-include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
+include::label_institution.csv[lines=1]
+...,,,,,
+include::label_institution.csv[lines=2630;32017;17398;11819;23062;19324]
+...,,,,,
 |===================================================
 
 
@@ -534,7 +537,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.dabjkM[]
+include::/documents/formats/V4.7.0/tmp.fNaIlB[]
 |===================================================
 
 
@@ -567,7 +570,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.lInFdI[]
+include::/documents/formats/V4.7.0/tmp.PbNfCg[]
 |===================================================
 
 
@@ -672,7 +675,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.HHBLpD[]
+include::/documents/formats/V4.7.0/tmp.LljPiF[]
 |===================================================
 
 
@@ -711,7 +714,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.pLDPAc[]
+include::/documents/formats/V4.7.0/tmp.GHcBlG[]
 |===================================================
 
 
@@ -841,6 +844,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Thu Jul  2 19:08:09 UTC 2020
+This revision: Thu Jul  2 21:11:53 UTC 2020
 *******************
 

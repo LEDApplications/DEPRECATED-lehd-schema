@@ -492,7 +492,10 @@ This list has been supplemented with records for regional groupings of instituti
 
 [width=\"80%\",format=\"csv\",cols=\"^1,<4,^2,3*^1\",options=\"header\"]
 |===================================================
-include::label_institution.csv[lines=1;2630;32017;17398;11819;23062;19324]
+include::label_institution.csv[lines=1]
+...,,,,,
+include::label_institution.csv[lines=2630;32017;17398;11819;23062;19324]
+...,,,,,
 |===================================================
 " >> $asciifile
 

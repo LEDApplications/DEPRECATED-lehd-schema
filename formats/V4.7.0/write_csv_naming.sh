@@ -224,7 +224,7 @@ done
 # extensions
 
 
-cat CHANGES.txt >> $asciifile
+cat CHANGES_NAMING.txt >> $asciifile
 
 echo "
 [IMPORTANT]

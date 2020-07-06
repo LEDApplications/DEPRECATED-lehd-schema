@@ -924,7 +924,7 @@ include::$arg[]
 " >> $asciifile
 
 
-cat CHANGES.txt >> $asciifile
+cat CHANGES_SCHEMA.txt >> $asciifile
 
 echo "
 

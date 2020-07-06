@@ -1,6 +1,6 @@
 = LEHD Public Use Shapefile Data
 <ces.qwi.feedback@census.gov>
-02 July 2020
+06 July 2020
 :ext-relative: {outfilesuffix}
 ( link:lehd_shapefiles.pdf[Printable version] )
 
@@ -156,18 +156,10 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 - 2020-06-26: Initial release
 
 === Changes from 4.6.0
-- Merge PSEO schema files into official release version
-- Minor formatting changes
 
-=== Changes from 4.5.0-draft
-- Additional status flags on PSEO Earnings
-- Additional measures on PSEO Flows to report unobserved/marginally employed
-- Earnings reported at 2-digit CIPCODE level
-- Institution code changed to 8-digits
-- Updated to 2020 CIPCODE
 
 <<<
 *******************
-This revision: Thu Jul  2 21:11:59 UTC 2020
+This revision: Mon Jul  6 15:29:43 UTC 2020
 *******************
 

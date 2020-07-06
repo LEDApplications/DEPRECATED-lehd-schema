@@ -73,7 +73,7 @@ function untar_payload()
 
 untar_payload >> $asciifile
 echo "" >> $asciifile
-cat CHANGES.txt >> $asciifile
+cat CHANGES_SHAPEFILES.txt >> $asciifile
 
 echo "
 

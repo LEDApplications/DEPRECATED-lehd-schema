@@ -1,6 +1,6 @@
 = LEHD Public Use  Schema V4.7.0 - File and Directory Naming Convention
 <ces.qwi.feedback@census.gov>
-06 July 2020
+07 July 2020
 :ext-relative: {outfilesuffix}
 
 ( link:lehd_csv_naming.pdf[Printable version] )
@@ -231,6 +231,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-This revision: Mon Jul  6 16:18:10 UTC 2020
+This revision: Tue Jul  7 15:52:38 UTC 2020
 *******************
 

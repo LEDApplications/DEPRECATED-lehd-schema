@@ -5,3 +5,4 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 - 2020-06-26: Initial release
 
 === Changes from 4.6.0
+- None

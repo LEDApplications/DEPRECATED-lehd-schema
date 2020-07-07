@@ -2,7 +2,7 @@ Indicator Variable,Alternate Name,Status Flag,Indicator Name,Description,Units,C
 y1_p25_earnings,y1_p25_earnings,status_y1_earnings,Earnings 25th Percentile in Year 1,Earnings 25th Percentile in Year 1 (2016 Dollars),Dollars,Earnings,1
 y1_p50_earnings,y1_p50_earnings,status_y1_earnings,Earnings 50th Percentile in Year 1,Earnings 50th Percentile in Year 1 (2016 Dollars),Dollars,Earnings,1
 y1_p75_earnings,y1_p75_earnings,status_y1_earnings,Earnings 75th Percentile in Year 1,Earnings 75th Percentile in Year 1 (2016 Dollars),Dollars,Earnings,1
-y1_grads_earn,y1_grads_earn,status_y1_grads_earn,Graduates Employed in Year 1,Count of Employed Graduates in Year 1 (2016 Dollars),Count,Employment,1
+y1_grads_earn,y1_grads_earn,status_y1_grads_earn,Graduates Employed in Year 1,Count of Employed Graduates in Year 1,Count,Employment,1
 y5_p25_earnings,y5_p25_earnings,status_y5_earnings,Earnings 25th Percentile in Year 5,Earnings 25th Percentile in Year 5 (2016 Dollars),Dollars,Earnings,1
 y5_p50_earnings,y5_p50_earnings,status_y5_earnings,Earnings 50th Percentile in Year 5,Earnings 50th Percentile in Year 5 (2016 Dollars),Dollars,Earnings,1
 y5_p75_earnings,y5_p75_earnings,status_y5_earnings,Earnings 75th Percentile in Year 5,Earnings 75th Percentile in Year 5 (2016 Dollars),Dollars,Earnings,1

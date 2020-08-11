@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.aOBHHk[]
+include::/documents/formats/V4.7.0/tmp.mlFINH[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.aOBHHk[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.MiIohF[]
+include::/documents/formats/V4.7.0/tmp.pOCkMj[]
 |===================================================
 <<<
 
@@ -537,7 +537,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.BaFgFk[]
+include::/documents/formats/V4.7.0/tmp.kalGph[]
 |===================================================
 
 
@@ -570,7 +570,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.pLapdO[]
+include::/documents/formats/V4.7.0/tmp.nIoAEM[]
 |===================================================
 
 
@@ -675,7 +675,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.mPbJMm[]
+include::/documents/formats/V4.7.0/tmp.BFIjie[]
 |===================================================
 
 
@@ -714,7 +714,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.OBbJje[]
+include::/documents/formats/V4.7.0/tmp.DkOCBb[]
 |===================================================
 
 
@@ -844,6 +844,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Tue Aug 11 19:31:07 UTC 2020
+This revision: Tue Aug 11 19:41:01 UTC 2020
 *******************
 

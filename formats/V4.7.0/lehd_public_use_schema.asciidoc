@@ -1,6 +1,6 @@
 = LEHD Public Use Data Schema V4.7.0
 <ces.qwi.feedback@census.gov>
-19 August 2020
+21 August 2020
 // a2x: --dblatex-opts "-P latex.output.revhistory=0 --param toc.section.depth=3"
 :ext-relative: {outfilesuffix}
 ( link:lehd_public_use_schema.pdf[Printable version] )
@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.OPAHKF[]
+include::/documents/formats/V4.7.0/tmp.ddpjnK[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.OPAHKF[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.gEfnGI[]
+include::/documents/formats/V4.7.0/tmp.ehaifF[]
 |===================================================
 <<<
 
@@ -499,7 +499,6 @@ include::label_cip_level.csv[]
 
 CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
 Data are reported using 2020 CIP codes, for all years.
-In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
 
 [width="90%",format="csv",cols="^1,<2,^1,^1,<6",options="header"]
 |===================================================
@@ -537,7 +536,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.OahAJl[]
+include::/documents/formats/V4.7.0/tmp.jOgGeL[]
 |===================================================
 
 
@@ -570,7 +569,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.IMOfFI[]
+include::/documents/formats/V4.7.0/tmp.KpmmEl[]
 |===================================================
 
 
@@ -651,9 +650,6 @@ WY,S C W M,link:label_geography_wy.csv[]
 
 Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.
 
-*agg_level* is currently  reported only for  J2J data products.
-
-
 The following variables are included in the link:label_agg_level.csv[label_agg_level.csv]   file:
 
 [width="60%",format="csv",cols="<2,<5",options="header"]
@@ -675,7 +671,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.hbdjJc[]
+include::/documents/formats/V4.7.0/tmp.FDiEHC[]
 |===================================================
 
 
@@ -714,8 +710,17 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.IBKJEJ[]
+include::/documents/formats/V4.7.0/tmp.OiodOf[]
 |===================================================
+
+===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)
+
+Earnings estimates and counts are provided only at the 2-digit CIP level for Masters and Doctor Research programs (degree levels 07 and 17). Records are included for 4-digit programs observed, but all measures are suppressed.
+
+
+==== QWI
+
+Aggregation level to be added to QWI in a future release
 
 
 <<<
@@ -844,6 +849,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Wed Aug 19 14:39:41 UTC 2020
+This revision: Fri Aug 21 15:16:00 UTC 2020
 *******************
 

@@ -15,7 +15,7 @@
 <h1>LEHD Public Use Data Schema V4.7.0</h1>
 <div class="details">
 <span id="author" class="author">&lt;ces.qwi.feedback@census.gov&gt;</span><br>
-<span id="revdate">19 August 2020</span>
+<span id="revdate">21 August 2020</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -105,6 +105,7 @@
 <ul class="sectlevel3">
 <li><a href="#_j2j">6.19.1. J2J</a></li>
 <li><a href="#_pseo">6.19.2. PSEO</a></li>
+<li><a href="#_qwi">6.19.3. QWI</a></li>
 </ul>
 </li>
 </ul>
@@ -3650,8 +3651,7 @@ This list has been supplemented with records for regional groupings of instituti
 </div>
 <div class="paragraph">
 <p>CIP codes are sourced from the <a href="https://nces.ed.gov/ipeds/cipcode/">National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)</a>.
-Data are reported using 2020 CIP codes, for all years.
-In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).</p>
+Data are reported using 2020 CIP codes, for all years.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -4538,9 +4538,6 @@ for all entities of <a href="#geolevel">geo_level</a> 'D'. For more information 
 <p>Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.</p>
 </div>
 <div class="paragraph">
-<p><strong>agg_level</strong> is currently  reported only for  J2J data products.</p>
-</div>
-<div class="paragraph">
 <p>The following variables are included in the <a href="label_agg_level.csv">label_agg_level.csv</a>   file:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
@@ -5092,6 +5089,18 @@ available in the PSEO release will be flagged.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect4">
+<h5 id="_restricted_4_digit_cip_tabulations_in_earnings_data_pseoe">Restricted 4-digit CIP tabulations in earnings data (PSEOE)</h5>
+<div class="paragraph">
+<p>Earnings estimates and counts are provided only at the 2-digit CIP level for Masters and Doctor Research programs (degree levels 07 and 17). Records are included for 4-digit programs observed, but all measures are suppressed.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_qwi">6.19.3. QWI</h4>
+<div class="paragraph">
+<p>Aggregation level to be added to QWI in a future release</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -5515,7 +5524,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>This revision: Wed Aug 19 14:39:41 UTC 2020</p>
+<p>This revision: Fri Aug 21 15:16:00 UTC 2020</p>
 </div>
 </div>
 </div>
@@ -5525,7 +5534,7 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-08-19 14:39:41 UTC
+Last updated 2020-08-21 15:16:00 UTC
 </div>
 </div>
 </body>

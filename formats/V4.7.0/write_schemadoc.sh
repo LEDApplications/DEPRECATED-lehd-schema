@@ -530,7 +530,6 @@ echo "
 
 CIP codes are sourced from the https://nces.ed.gov/ipeds/cipcode/[National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS)].
 Data are reported using 2020 CIP codes, for all years.
-In 4-digit CIP tabulations, select degree levels are collapsed to the 2-Digit CIP family, using custom codes (e.g., 01.XX, 02.XX, etc.).
 
 [width=\"90%\",format=\"csv\",cols=\"^1,<2,^1,^1,<6\",options=\"header\"]
 |===================================================

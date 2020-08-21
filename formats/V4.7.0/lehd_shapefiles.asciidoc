@@ -156,6 +156,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-Released: 2020-08-21 15:32:11
+Released: 2020-08-21
 *******************
 

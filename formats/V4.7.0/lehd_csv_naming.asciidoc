@@ -228,6 +228,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-Released: 2020-08-21 15:32:02
+Released: 2020-08-21
 *******************
 

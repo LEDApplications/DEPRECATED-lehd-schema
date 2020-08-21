@@ -940,7 +940,7 @@ Released: $(date '+%F')
 *******************
 " >> $asciifile
 echo "$asciifile created"
-asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a toclevels=$toclevels -a outfilesuffix=.html $asciifile
+asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a toclevels=$toclevels -a sectnumlevels=$toclevels -a outfilesuffix=.html $asciifile
 [[ -f $(basename $asciifile .asciidoc).html  ]] && echo "$(basename $asciifile .asciidoc).html created"
 asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a outfilesuffix=.pdf $asciifile
 [[ -f $(basename $asciifile .asciidoc).pdf  ]] && echo "$(basename $asciifile .asciidoc).pdf created"

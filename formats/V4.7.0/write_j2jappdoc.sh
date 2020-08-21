@@ -1,6 +1,6 @@
 #!/bin/bash
 # set defaults
-toclevels=3
+toclevels=4
 # print out info
 if [[ -z $1 ]]
 then

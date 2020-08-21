@@ -1,7 +1,7 @@
 Variable,Type,label
 agg_level_pseo,Numeric,Aggregation level
 inst_level,Char(1),Tabulation level of the institution
-institution,Char(6),Place of the institution
+institution,Char(8),Place of the institution
 degree_level,Char(2),Degree level code
 cip_level,Char(1),Degree field level of aggregation
 cipcode,Char(7),Degree field

@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.jgbCfp[]
+include::/documents/formats/V4.7.0/tmp.HmFMlg[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.jgbCfp[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.phmohb[]
+include::/documents/formats/V4.7.0/tmp.EKGCoL[]
 |===================================================
 <<<
 
@@ -536,7 +536,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.HoDbHg[]
+include::/documents/formats/V4.7.0/tmp.ifgaam[]
 |===================================================
 
 
@@ -569,7 +569,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.gPPbmm[]
+include::/documents/formats/V4.7.0/tmp.codPDI[]
 |===================================================
 
 
@@ -671,7 +671,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.dhHlpF[]
+include::/documents/formats/V4.7.0/tmp.DAEklG[]
 |===================================================
 
 
@@ -710,7 +710,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.BLjnJf[]
+include::/documents/formats/V4.7.0/tmp.JLmlhp[]
 |===================================================
 
 ===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)

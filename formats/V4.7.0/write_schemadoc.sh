@@ -721,9 +721,6 @@ echo "
 
 Measures within the J2J and QWI data products are tabulated on many different dimensions, including demographic characteristics, geography, industry, and other firm characteristics. For Origin-Destination (O-D) tables, characteristics of the origin and destination firm can be tabulated separately.  Every tabulation level is assigned a unique aggregation index, represented by the agg_level variable. This index starts from 1, representing a national level grand total (all industries, workers, etc.), and progresses through different combinations of characteristics. There are gaps in the progression to leave space for aggregation levels that may be included in future data releases.
 
-*agg_level* is currently  reported only for  J2J data products.
-
-
 The following variables are included in the link:$nsfile[label_agg_level.csv]   file:
 
 [width=\"60%\",format=\"csv\",cols=\"<2,<5\",options=\"header\"]
@@ -805,6 +802,12 @@ include::$tmp_pseoagg_rows[]
 Earnings estimates and counts are provided only at the 2-digit CIP level for Masters and Doctor Research programs (degree levels 07 and 17). Records are included for 4-digit programs observed, but all measures are suppressed.
 ">> $asciifile
 
+
+echo "
+==== QWI
+
+Aggregation level to be added to QWI in a future release
+">> $asciifile
 
 
 arg=label_flags.csv

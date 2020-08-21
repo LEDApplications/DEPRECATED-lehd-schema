@@ -235,7 +235,7 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-This revision: $(date)
+Released: $(date '+%F %H:%M:%S')
 *******************
 " >> $asciifile
 echo "$asciifile created"

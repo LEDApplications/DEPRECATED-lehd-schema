@@ -799,6 +799,10 @@ The characteristics available on an aggregation level are repeated using a serie
 |===================================================
 include::$tmp_pseoagg_rows[]
 |===================================================
+
+===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)
+
+Earnings estimates and counts are provided only at the 2-digit CIP level for Masters and Doctor Research programs (degree levels 07 and 17). Records are included for 4-digit programs observed, but all measures are suppressed.
 ">> $asciifile
 
 

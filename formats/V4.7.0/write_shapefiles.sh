@@ -79,7 +79,7 @@ echo "
 
 <<<
 *******************
-Released: $(date '+%F %H:%M:%S')
+Released: $(date '+%F')
 *******************
 " >> $asciifile
 echo "$asciifile created"

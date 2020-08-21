@@ -216,9 +216,6 @@ include::naming_ext.csv[]
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== This version (revisions)
-- 2020-06-26: Initial release
-
 === Changes from 4.6.0
 - Adding PSEO data product
 
@@ -231,6 +228,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-This revision: Fri Aug 21 15:15:57 UTC 2020
+Released: 2020-08-21 15:32:02
 *******************
 

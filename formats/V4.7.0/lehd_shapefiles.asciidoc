@@ -151,14 +151,11 @@ ________________________________________________________________________________
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== This version (revisions)
-- 2020-06-26: Initial release
-
 === Changes from 4.6.0
 - None
 
 <<<
 *******************
-This revision: Fri Aug 21 15:16:06 UTC 2020
+Released: 2020-08-21 15:32:11
 *******************
 

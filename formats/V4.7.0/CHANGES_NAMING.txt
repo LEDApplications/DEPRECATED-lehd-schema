@@ -1,9 +1,6 @@
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== This version (revisions)
-- 2020-06-26: Initial release
-
 === Changes from 4.6.0
 - Adding PSEO data product
 

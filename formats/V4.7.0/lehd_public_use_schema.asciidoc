@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.ddpjnK[]
+include::/documents/formats/V4.7.0/tmp.jEFGGa[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/documents/formats/V4.7.0/tmp.ddpjnK[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.ehaifF[]
+include::/documents/formats/V4.7.0/tmp.fIOIgH[]
 |===================================================
 <<<
 
@@ -536,7 +536,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.jOgGeL[]
+include::/documents/formats/V4.7.0/tmp.fEJJCP[]
 |===================================================
 
 
@@ -569,7 +569,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.KpmmEl[]
+include::/documents/formats/V4.7.0/tmp.HNGaCN[]
 |===================================================
 
 
@@ -671,7 +671,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.FDiEHC[]
+include::/documents/formats/V4.7.0/tmp.GGkDdd[]
 |===================================================
 
 
@@ -710,7 +710,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/documents/formats/V4.7.0/tmp.OiodOf[]
+include::/documents/formats/V4.7.0/tmp.GdHjcj[]
 |===================================================
 
 ===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)
@@ -833,9 +833,6 @@ include::variables_lags.csv[]
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== This version (revisions)
-- 2020-06-26: Initial release
-
 === Changes from 4.6.0
 - Merge PSEO schema files into official release version
 - Minor formatting changes
@@ -849,6 +846,6 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 <<<
 *******************
-This revision: Fri Aug 21 15:16:00 UTC 2020
+Released: 2020-08-21 15:32:05
 *******************
 

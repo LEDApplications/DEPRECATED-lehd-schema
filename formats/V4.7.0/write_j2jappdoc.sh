@@ -525,7 +525,7 @@ echo "
 
 <<<
 *******************
-This revision: $(date)
+Released: $(date '+%F %H:%M:%S')
 *******************
 " >> $asciifile
 echo "$asciifile created"

@@ -1,6 +1,6 @@
-= LEHD Public Use Data Schema V4.7.0
+= LEHD Public Use Data Schema V4.8.0
 <ces.qwi.feedback@census.gov>
-21 August 2020
+04 February 2021
 // a2x: --dblatex-opts "-P latex.output.revhistory=0 --param toc.section.depth=4"
 :ext-relative: {outfilesuffix}
 ( link:lehd_public_use_schema.pdf[Printable version] )
@@ -194,7 +194,7 @@ include::variables_j2jod.csv[]
 ( link:variables_pseoe.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.M74U8sBmCI[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.bPl1KxM2LG[]
 |===================================================
 <<<
 
@@ -203,7 +203,7 @@ include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.M74U8sBmCI[]
 ( link:variables_pseof.csv[] )
 [width="95%",format="csv",cols="<1,<3,<5,2*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.pzqJdat5t4[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.koWhlRqcS7[]
 |===================================================
 <<<
 
@@ -536,7 +536,7 @@ Shapefiles are described in a link:lehd_shapefiles{ext-relative}[separate docume
 
 [width="90%",format="csv",cols="^1,<3,<8",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.PD0NomP1EN[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.RuGbgTO4Fl[]
 |===================================================
 
 
@@ -569,7 +569,7 @@ Some parts of the schema use (lower or upper-case) state postal codes.
 
 [width="40%",format="csv",cols="^1,<2",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.lCEupo9HeI[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.2o4fapBVBq[]
 |===================================================
 
 
@@ -671,7 +671,7 @@ A shortened representation of the file is provided below, the complete file is a
 
 [width="90%",format="csv",cols=">1,3*<2,5*<1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.JcYedyy2in[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.tM9Euw7kPH[]
 |===================================================
 
 
@@ -710,7 +710,7 @@ The characteristics available on an aggregation level are repeated using a serie
 
 [width="90%",format="csv",cols="^1,2*<3,8*^1",options="header"]
 |===================================================
-include::/home/jody/workspace/data/lehd-schema/formats/V4.7.0/tmp.658cpLbEj1[]
+include::/home/jody/workspace/data/lehd-schema/formats/V4.8.0/tmp.qoeyrculKq[]
 |===================================================
 
 ===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)
@@ -781,15 +781,15 @@ Delaware
 --------------------------------
 
 
-QWI_F DE 10 1998:3-2019:4 V4.6.0 R2020Q3 qwipu_de_20200717_2142
-QWI_FA DE 10 1998:3-2018:4 V4.6.0 R2020Q3 qwipu_de_20200717_2142
-QWI_FS DE 10 1998:3-2018:4 V4.6.0 R2020Q3 qwipu_de_20200717_2142
+QWI_F DE 10 1998:3-2020:1 V4.7.0 R2020Q4 qwipu_de_20201009_0545
+QWI_FA DE 10 1998:3-2018:4 V4.7.0 R2020Q4 qwipu_de_20201009_0545
+QWI_FS DE 10 1998:3-2018:4 V4.7.0 R2020Q4 qwipu_de_20201009_0545
 --------------------------------
 Similarly, the metadata for the latest_release release of
 Delaware J2J
 tabulations (obtained from https://lehd.ces.census.gov/data/j2j/latest_release/de/j2j/version_j2j.txt[here]) has  the following content:
 --------------------------------
-J2J DE 10 2000:2-2019:2 V4.6.0 R2020Q2 j2jpu_de_20200620_0943
+J2J DE 10 2000:2-2019:4 V4.7.0 R2020Q4 j2jpu_de_20201204_1309
 --------------------------------
 Some J2J metadata may contain multiple lines, as necessary.
 
@@ -833,19 +833,11 @@ include::variables_lags.csv[]
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== Changes from 4.6.0
-- Merge PSEO schema files into official release version
-- Minor formatting changes
-
-=== Changes from 4.5.0-draft
-- Additional status flags on PSEO Earnings
-- Additional measures on PSEO Flows to report unobserved/marginally employed
-- Earnings reported at 2-digit CIPCODE level
-- Institution code changed to 8-digits
-- Updated to 2020 CIPCODE
+=== Changes from 4.7.0
+- Update EmpSpv due to the restructuring of the QWI weights
 
 <<<
 *******************
-Released: 2020-08-21
+Released: 2021-02-04
 *******************
 

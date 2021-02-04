@@ -1,6 +1,6 @@
 = LEHD Public Use Shapefile Data
 <ces.qwi.feedback@census.gov>
-21 August 2020
+04 February 2021
 :ext-relative: {outfilesuffix}
 ( link:lehd_shapefiles.pdf[Printable version] )
 
@@ -151,11 +151,11 @@ ________________________________________________________________________________
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== Changes from 4.6.0
+=== Changes from 4.7.0
 - None
 
 <<<
 *******************
-Released: 2020-08-21
+Released: 2021-02-04
 *******************
 

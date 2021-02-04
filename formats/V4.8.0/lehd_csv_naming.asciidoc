@@ -1,6 +1,6 @@
-= LEHD Public Use  Schema V4.7.0 - File and Directory Naming Convention
+= LEHD Public Use  Schema V4.8.0 - File and Directory Naming Convention
 <ces.qwi.feedback@census.gov>
-21 August 2020
+04 February 2021
 :ext-relative: {outfilesuffix}
 
 ( link:lehd_csv_naming.pdf[Printable version] )
@@ -216,9 +216,8 @@ include::naming_ext.csv[]
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== Changes from 4.6.0
-- Adding PSEO data product
-
+=== Changes from 4.7.0
+- None
 
 [IMPORTANT]
 .Important
@@ -228,6 +227,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-Released: 2020-08-21
+Released: 2021-02-04
 *******************
 

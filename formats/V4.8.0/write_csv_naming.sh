@@ -124,7 +124,7 @@ Files downloaded through the  LED Extraction Tool at https://ledextract.ces.cens
 where +[id]+ is the Request ID (a unique string of characters) generated every time ``Submit Request'' is clicked. The ID references each query submission made to the database.
 
 
-=== [[versionqwi]]Metadata for QWI and J2J data files (version.txt)
+=== [[versionqwi]]Metadata for QWI, J2J, and PSEO data files (version.txt)
 Metadata accompanies the data files, identifying provenance, geographic and temporal coverage. These files follow the following naming convention:
 ....................................
 $(awk -F, ' NR == 5 { print $1 }' naming_convention.csv  )

@@ -1,6 +1,6 @@
 = LEHD Public Use  Schema V4.8.0 - File and Directory Naming Convention
 <ces.qwi.feedback@census.gov>
-18 March 2021
+25 March 2021
 :ext-relative: {outfilesuffix}
 
 ( link:lehd_csv_naming.pdf[Printable version] )
@@ -64,7 +64,7 @@ Files downloaded through the  LED Extraction Tool at https://ledextract.ces.cens
 where +[id]+ is the Request ID (a unique string of characters) generated every time Submit Request'' is clicked. The ID references each query submission made to the database.
 
 
-=== [[versionqwi]]Metadata for QWI and J2J data files (version.txt)
+=== [[versionqwi]]Metadata for QWI, J2J, and PSEO data files (version.txt)
 Metadata accompanies the data files, identifying provenance, geographic and temporal coverage. These files follow the following naming convention:
 ....................................
 version_[type].txt
@@ -227,6 +227,6 @@ Some of the data products noted above do not exist yet.
 
 <<<
 *******************
-Released: 2021-03-18
+Released: 2021-03-25
 *******************
 

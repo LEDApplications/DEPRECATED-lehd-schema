@@ -957,7 +957,7 @@ Colorado Department of Higher Education
 
 (link:${arg}[])
 
-This file provides the list of institutions that are included in the PSEO release. This file is an extract from ( link:label_institution.csv[] ).
+This file provides the list of institutions that are included in the PSEO release. This file is an extract from link:label_institution.csv[].
 
 The files are structured as follows:
 [width=\"80%\",format=\"csv\",cols=\"<2,<1,<4\",options=\"header\"]

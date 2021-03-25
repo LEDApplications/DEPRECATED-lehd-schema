@@ -3,3 +3,4 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 === Changes from 4.7.0
 - Update EmpSpv due to the restructuring of the QWI weights
+- Added PSEO metadata files for data partners and coverage

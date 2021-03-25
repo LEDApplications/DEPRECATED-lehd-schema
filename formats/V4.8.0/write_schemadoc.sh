@@ -931,7 +931,7 @@ include::$arg[]
 
 arg=variables_pseo_institutions.csv
 echo "
-=== [[metadatapseo]] Additional metadata for PSEO files
+=== [[metadatapseo]] Additional Metadata for PSEO Files
 
 Several additional files within each state release are included to provide information on the institutions within the scope of PSEO. The ALL directory consolidates the individual state files.
 
@@ -953,7 +953,7 @@ A sample file follows:
 Colorado Department of Higher Education
 ----
 
-==== Institutions available within PSEO (pseo_[ST]_institutions.csv)
+==== Institutions Available Within PSEO (pseo_[ST]_institutions.csv)
 
 (link:${arg}[])
 

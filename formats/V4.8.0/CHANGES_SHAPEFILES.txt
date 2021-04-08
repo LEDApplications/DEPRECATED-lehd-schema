@@ -2,4 +2,5 @@
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === Changes from 4.7.0
-- None
+- Underlying geovintage updated to reflect 2020 TIGER/Line geography (except for CBSAs - "gb" and "gm" features)
+- Updated shapefiles based on TIGER/Line 2020 (except for CBSAs - "gb" and "gm" shapefile types)

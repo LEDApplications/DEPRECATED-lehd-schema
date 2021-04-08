@@ -239,11 +239,16 @@ Released: $(date '+%F')
 *******************
 " >> $asciifile
 echo "$asciifile created"
+
+# create HTML docs
 asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a outfilesuffix=.html $asciifile
 echo "$(basename $asciifile .asciidoc).html created"
-asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a linkcss -a outfilesuffix=.pdf $asciifile
-echo "$(basename $asciifile .asciidoc).pdf created"
-#html2text $(basename $asciifile .asciidoc).html > $(basename $asciifile .asciidoc).txt
-#echo "$(basename $asciifile .asciidoc).txt created"
+
+# create PDF docs, only if an official release
+if [[ "$version" = "official" ]]; then
+  asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a linkcss -a outfilesuffix=.pdf $asciifile
+  echo "$(basename $asciifile .asciidoc).pdf created"
+fi
+
 echo "Deleting tmp files"
 rm tmp*

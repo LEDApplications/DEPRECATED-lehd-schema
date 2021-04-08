@@ -89,7 +89,7 @@ asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a toclevels=$toclev
 [[ -f ${basefile}.html  ]] && echo "${basefile}.html created"
 
 # create PDF docs, only if an official release
-if [[ $version -eq "official" ]]; then
+if [[ "$version" = "official" ]]; then
   asciidoctor-pdf -a pdf-page-size=letter  -a icons -a toc -a numbered -a outfilesuffix=.pdf $asciifile
   [[ -f ${basefile}.pdf  ]] && echo "${basefile}.pdf created"
 fi

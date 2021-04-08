@@ -245,7 +245,7 @@ asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a outfilesuffix=.ht
 echo "$(basename $asciifile .asciidoc).html created"
 
 # create PDF docs, only if an official release
-if [[ $version -eq "official" ]]; then
+if [[ "$version" = "official" ]]; then
   asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a linkcss -a outfilesuffix=.pdf $asciifile
   echo "$(basename $asciifile .asciidoc).pdf created"
 fi

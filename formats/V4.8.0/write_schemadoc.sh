@@ -978,12 +978,16 @@ Released: $(date '+%F')
 *******************
 " >> $asciifile
 echo "$asciifile created"
+
+# create HTML docs
 asciidoctor -b html5 -a icons -a toc -a numbered -a linkcss -a toclevels=$toclevels -a sectnumlevels=$toclevels -a outfilesuffix=.html $asciifile
 [[ -f $(basename $asciifile .asciidoc).html  ]] && echo "$(basename $asciifile .asciidoc).html created"
-asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a outfilesuffix=.pdf $asciifile
-[[ -f $(basename $asciifile .asciidoc).pdf  ]] && echo "$(basename $asciifile .asciidoc).pdf created"
-#html2text $(basename $asciifile .asciidoc).html > $(basename $asciifile .asciidoc).txt
-#[[ -f $(basename $asciifile .asciidoc).txt  ]] && echo "$(basename $asciifile .asciidoc).txt created"
+
+# create PDF docs, only if an official release
+if [[ $version -eq "official" ]]; then
+  asciidoctor-pdf -a pdf-page-size=letter -a icons -a toc -a numbered -a outfilesuffix=.pdf $asciifile
+  [[ -f $(basename $asciifile .asciidoc).pdf  ]] && echo "$(basename $asciifile .asciidoc).pdf created"
+fi
+
 echo "Removing tmp files"
 rm -f $cwd/tmp.* #remove files made by mktemp
-#rm tmp*

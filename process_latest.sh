@@ -4,19 +4,19 @@
 FILES=$(pwd $0)/formats
 GLOBALSH=write_all.sh
 
-# gh-pages gets tagged with a draft, master gets official
-current_branch=$(git rev-parse --abbrev-ref HEAD)
-case $current_branch in
-    master)
-        VERSION=official
+# passing in 'travis', as done during build gets tagged as draft
+# anything else is considered an official build
+case $1 in
+    travis)
+        VERSION=draft
         ;;
     *)
-        VERSION=draft
+        VERSION=official
         ;;
 esac
 
 # find latest
-[[ -z $2 ]] && latest=$(cd formats; ls -1d * | grep -E "V[0-9]" | tail -1) || latest=$2
+latest=$(cd formats; ls -1d * | grep -E "V[0-9]" | tail -1)
 
 # diagnostics
 echo "========================================="

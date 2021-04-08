@@ -35,13 +35,14 @@ New TIGER/Line shapefiles are typically released by the Census Bureau's Geograph
 
 Sources
 -------
-Files are derived from   https://www.census.gov/geo/maps-data/data/tiger-line.html[TIGER/Line 2019 shapefiles]:
+Files are derived from   https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2020
+.html[TIGER/Line 2020 shapefiles] (except the "gb" and "gm" shapefile types, which are still sourced from https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2019.html[TIGER/Line 2019]):
 
-* https://www2.census.gov/geo/tiger/TIGER2019/STATE/[tl_2019_us_state]
-* https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/[tl_2019_us_county]
-* https://www2.census.gov/geo/tiger/TIGER2019/CBSA/[tl_2019_us_cbsa]
-* https://www2.census.gov/geo/tiger/TIGER2019/PLACE/[tl_2019_(ST)_place]  (for creation of WIA/WIB shapefile)
-* https://www2.census.gov/geo/tiger/TIGER2019/COUSUB/[tl_2019_(ST)_cousub] (for creation of WIA/WIB shapefile)
+* https://www2.census.gov/geo/tiger/TIGER2020/STATE/[tl_2020_us_state]
+* https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/[tl_2020_us_county]
+* https://www2.census.gov/geo/tiger/TIGER2019/CBSA/[tl_2020_us_cbsa]
+* https://www2.census.gov/geo/tiger/TIGER2020/PLACE/[tl_2020_(ST)_place]  (for creation of WIA/WIB shapefile)
+* https://www2.census.gov/geo/tiger/TIGER2020/COUSUB/[tl_2020_(ST)_cousub] (for creation of WIA/WIB shapefile)
 
 Transformations
 ---------------
@@ -152,7 +153,8 @@ ________________________________________________________________________________
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === Changes from 4.7.0
-- None
+- Underlying geovintage updated to reflect 2020 TIGER/Line geography (except for CBSAs - "gb" and "gm" features)
+- Updated shapefiles based on TIGER/Line 2020 (except for CBSAs - "gb" and "gm" shapefile types)
 
 <<<
 *******************

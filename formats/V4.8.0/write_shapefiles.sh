@@ -124,7 +124,7 @@ Files are derived from   https://www.census.gov/geographies/mapping-files/time-s
 
 * https://www2.census.gov/geo/tiger/TIGER2020/STATE/[tl_2020_us_state]
 * https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/[tl_2020_us_county]
-* https://www2.census.gov/geo/tiger/TIGER2020/CBSA/[tl_2020_us_cbsa]
+* https://www2.census.gov/geo/tiger/TIGER2019/CBSA/[tl_2019_us_cbsa]
 * https://www2.census.gov/geo/tiger/TIGER2020/PLACE/[tl_2020_(ST)_place]  (for creation of WIA/WIB shapefile)
 * https://www2.census.gov/geo/tiger/TIGER2020/COUSUB/[tl_2020_(ST)_cousub] (for creation of WIA/WIB shapefile)
 

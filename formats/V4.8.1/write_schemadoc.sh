@@ -96,7 +96,7 @@ This version reimplements some features from  V4.0. Many files compliant with LE
 
 Supersedes
 ----------
-This version supersedes V4.6.0, for files released as of R2020Q4.
+This version supersedes ${previousvintage}.
 
 Basic Schema
 ------------

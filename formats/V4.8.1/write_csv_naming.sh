@@ -30,6 +30,7 @@ cwd=$(pwd)
 numversion=${cwd##*/}
 # convert the column definitions to CSV
 sed 's/  /,/g;s/R N/R,N/; s/,,/,/g; s/,,/,/g; s/,,/,/g; s/, /,/g' column_definitions.txt | tail -n +2 > tmp.csv
+previousvintage=$(cd ..; ls -1d * | grep -E "V[0-9]" | tail -2 | head -1)
 
 # create ascii doc version
 asciifile=lehd_csv_naming.asciidoc
@@ -89,7 +90,7 @@ This version modifies a portion of the structure of the metadata. Many files com
 
 Supersedes
 ----------
-This version supersedes V4.6.0, for files released as of R2020Q4.
+This version supersedes ${previousvintage}.
 
 
 Basic Filename Schema

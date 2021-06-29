@@ -115,7 +115,7 @@ where +[YEAR]+ is the 4-digit year and +[QUARTER]+ the single-digit calendar yea
 include::naming_type.csv[]
 |===================================================
 
-=== [[geohi]]geohi
+=== [[geohi]]Geohi
 ( link:naming_geohi.csv[] )
 
 The geohi component in *filenames* is based on one of two possible code sets:

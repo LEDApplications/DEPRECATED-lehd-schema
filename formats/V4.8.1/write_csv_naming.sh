@@ -184,7 +184,7 @@ include::naming_type.csv[]
 # start with fips postal
 name=geohi
   arg=naming_$name.csv
-  echo "=== [[$name]]$name
+  echo "=== [[$name]]${name^}
 ( link:${arg}[] )
 
 The $name component in *filenames* is based on one of two possible code sets:

@@ -23,6 +23,17 @@ echo "========================================="
 echo "Processing $latest with output=$VERSION"
 echo "========================================="
 
+# check for byte order mark in data files
+bomfiles=$(for f in ./formats/${latest}/*.csv; do file $f; done | grep BOM)
+if [[ $bomfiles ]]; then
+  echo ""
+  echo "========================================="
+  echo "Warning: UTF-8 Unicode (with BOM) encoded file found"
+  echo "$bomfiles"
+  echo "========================================="
+  echo ""
+fi
+
 # do stuff
 cd $FILES/$latest
 ./$GLOBALSH $VERSION

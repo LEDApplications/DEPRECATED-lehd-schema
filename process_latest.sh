@@ -24,7 +24,7 @@ echo "Processing $latest with output=$VERSION"
 echo "========================================="
 
 # check for byte order mark in data files
-bomfiles=$(for f in ./formats/${latest}/*.csv; do /usr/bin/file $f; done | grep BOM)
+bomfiles=$(for f in ./formats/${latest}/*.csv; do file $f; done | grep BOM)
 if [[ $bomfiles ]]; then
   echo ""
   echo "========================================="

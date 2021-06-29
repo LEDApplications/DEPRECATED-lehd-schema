@@ -209,7 +209,7 @@ metro,Indicates collection of CBSA-level files (*directory names only*)
 for name in demo fas geocat indcat owncat sa ext
 do
   arg=naming_$name.csv
-  echo "=== $name
+  echo "=== ${name^}
 ( link:${arg}[] )
 
 [width=\"60%\",format=\"csv\",cols=\"^1,<4\",options=\"header\"]

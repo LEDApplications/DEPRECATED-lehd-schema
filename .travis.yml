@@ -4,19 +4,20 @@ addons:
   apt:
     packages:
       - libtext-multimarkdown-perl
-      - file
 
 sudo: required
 
 services:
-  - docker                  
+  - docker
 
 # safelist
 branches:
   only:
   - master
 
-before_install:            
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install file
   - mkdir -p output
   - docker pull asciidoctor/docker-asciidoctor
 

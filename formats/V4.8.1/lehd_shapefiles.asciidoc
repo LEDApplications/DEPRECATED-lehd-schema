@@ -1,6 +1,6 @@
 = LEHD Public Use Shapefile Data
 <ces.qwi.feedback@census.gov>
-04 February 2021
+29 June 2021
 :ext-relative: {outfilesuffix}
 ( link:lehd_shapefiles.pdf[Printable version] )
 
@@ -9,7 +9,7 @@
 [IMPORTANT]
 .Important
 ==============================================
-Feedback is welcome. 	
+This specification is draft. Feedback is welcome. 	
 Please write us at
 link:mailto:ces.qwi.feedback@census.gov?subject=LEHD_Shapefiles[ces.qwi.feedback@census.gov].
 ==============================================
@@ -35,13 +35,13 @@ New TIGER/Line shapefiles are typically released by the Census Bureau's Geograph
 
 Sources
 -------
-Files are derived from   https://www.census.gov/geo/maps-data/data/tiger-line.html[TIGER/Line 2019 shapefiles]:
+Files are derived from   https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2020.html[TIGER/Line 2020 shapefiles] (except the "gb" and "gm" shapefile types, which are still sourced from https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2019.html[TIGER/Line 2019]):
 
-* https://www2.census.gov/geo/tiger/TIGER2019/STATE/[tl_2019_us_state]
-* https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/[tl_2019_us_county]
+* https://www2.census.gov/geo/tiger/TIGER2020/STATE/[tl_2020_us_state]
+* https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/[tl_2020_us_county]
 * https://www2.census.gov/geo/tiger/TIGER2019/CBSA/[tl_2019_us_cbsa]
-* https://www2.census.gov/geo/tiger/TIGER2019/PLACE/[tl_2019_(ST)_place]  (for creation of WIA/WIB shapefile)
-* https://www2.census.gov/geo/tiger/TIGER2019/COUSUB/[tl_2019_(ST)_cousub] (for creation of WIA/WIB shapefile)
+* https://www2.census.gov/geo/tiger/TIGER2020/PLACE/[tl_2020_(ST)_place]  (for creation of WIA/WIB shapefile)
+* https://www2.census.gov/geo/tiger/TIGER2020/COUSUB/[tl_2020_(ST)_cousub] (for creation of WIA/WIB shapefile)
 
 Transformations
 ---------------
@@ -74,7 +74,7 @@ include::naming_geocat.csv[]
 |===================================================
 
 
-=== [[format]] FORMAT
+=== [[format]] Format
 ( link:variables_shp.csv[variables_shp.csv] )
 
 Files are distributed as https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml .
@@ -90,17 +90,17 @@ include::variables_shp.csv[]
 
 FIPS State Postal Code as per https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html
 
-==== GEOGRAPHY
+==== Geography
 ( link:label_geography.csv[] )
 
 The valid codes correspond to those listed on link:label_geography.csv[].
 
-==== NAME
+==== Name
 ( link:label_geography.csv[] )
 
 This is a string that corresponds in general to the 'label' field on link:label_geography.csv[]. Minor deviations for ease of exposition are possible.
 
-=== Common files
+=== Common Files
 ==== State
 ( link:lehd_shp_gs.zip[] )
 
@@ -113,7 +113,7 @@ No transformations occur to this layer other than those listed above.
 
 * STUSPS is appended to the NAME field so that county names are nationally unique. Example: "Cook, IL"
 
-==== CBSA - within State
+==== CBSA (within State)
 ( link:lehd_shp_gm.zip[] )
 
 * All features are split into state-specific CBSA features by intersecting each feature with the state shapefile features.
@@ -127,7 +127,7 @@ No transformations occur to this layer other than those listed above.
 The WIA/WIB shapefiles are built from the Place, County Subdivision, and County shapefiles from TIGER/Line based on definitions provided by the LED state partners.
 
 === Job-to-Job Flow Geographies
-==== Metropolitan (complete)
+==== Metropolitan (Complete)
 ( link:lehd_shp_gb.zip[] )
 
 * Micropolitan areas are removed and state remainder areas are added as new features. State remainders are assigned unique codes ([STUSPS]+999) and names ("Not in metropolitan area, [STUSPS]").
@@ -151,11 +151,11 @@ ________________________________________________________________________________
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== Changes from 4.7.0
+=== Changes from 4.8.0
 - None
 
 <<<
 *******************
-Released: 2021-02-04
+Released: 2021-06-29
 *******************
 

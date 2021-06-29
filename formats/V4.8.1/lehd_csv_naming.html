@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="&lt;ces.qwi.feedback@census.gov&gt;">
-<title>LEHD Public Use  Schema V4.8.0 - File and Directory Naming Convention</title>
+<title>LEHD Public Use  Schema V4.8.1 - File and Directory Naming Convention</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>LEHD Public Use  Schema V4.8.0 - File and Directory Naming Convention</h1>
+<h1>LEHD Public Use  Schema V4.8.1 - File and Directory Naming Convention</h1>
 <div class="details">
 <span id="author" class="author">&lt;ces.qwi.feedback@census.gov&gt;</span><br>
-<span id="revdate">04 February 2021</span>
+<span id="revdate">29 June 2021</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -27,7 +27,7 @@
 <li><a href="#_basic_filename_schema">5. Basic Filename Schema</a>
 <ul class="sectlevel2">
 <li><a href="#_qwipu_from_the_led_extraction_tool">5.1. QWIPU from the LED Extraction Tool</a></li>
-<li><a href="#_metadata_for_qwi_and_j2j_data_files_version_txt">5.2. Metadata for QWI and J2J data files (version.txt)</a></li>
+<li><a href="#_metadata_for_qwi_j2j_and_pseo_data_files_version_txt">5.2. Metadata for QWI, J2J, and PSEO data files (version.txt)</a></li>
 <li><a href="#_metadata_for_j2jod_files">5.3. Metadata for J2JOD files</a></li>
 </ul>
 </li>
@@ -36,19 +36,19 @@
 <ul class="sectlevel2">
 <li><a href="#_release">7.1. Release</a></li>
 <li><a href="#_types_and_products">7.2. Types and Products</a></li>
-<li><a href="#_geohi">7.3. geohi</a></li>
-<li><a href="#_demo">7.4. demo</a></li>
-<li><a href="#_fas">7.5. fas</a></li>
-<li><a href="#_geocat">7.6. geocat</a></li>
-<li><a href="#_indcat">7.7. indcat</a></li>
-<li><a href="#_owncat">7.8. owncat</a></li>
-<li><a href="#_sa">7.9. sa</a></li>
-<li><a href="#_ext">7.10. ext</a></li>
+<li><a href="#_geohi">7.3. Geohi</a></li>
+<li><a href="#_demo">7.4. Demo</a></li>
+<li><a href="#_fas">7.5. Fas</a></li>
+<li><a href="#_geocat">7.6. Geocat</a></li>
+<li><a href="#_indcat">7.7. Indcat</a></li>
+<li><a href="#_owncat">7.8. Owncat</a></li>
+<li><a href="#_sa">7.9. Sa</a></li>
+<li><a href="#_ext">7.10. Ext</a></li>
 </ul>
 </li>
 <li><a href="#_changes">8.  Changes</a>
 <ul class="sectlevel2">
-<li><a href="#_changes_from_4_7_0">8.1. Changes from 4.7.0</a></li>
+<li><a href="#_changes_from_4_8_0">8.1. Changes from 4.8.0</a></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +69,7 @@
 <td class="content">
 <div class="title">Important</div>
 <div class="paragraph">
-<p>Feedback is welcome. Please write us at <a href="mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema_draft">ces.qwi.feedback@census.gov</a>.</p>
+<p>This specification is draft. Feedback is welcome. Please write us at <a href="mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema_draft">ces.qwi.feedback@census.gov</a>.</p>
 </div>
 </td>
 </tr>
@@ -112,7 +112,7 @@ The contents (schema) for shapefiles are described in <a href="lehd_shapefiles.h
 <h2 id="_supersedes">4. Supersedes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This version supersedes V4.6.0, for files released as of R2020Q4.</p>
+<p>This version supersedes V4.8.0.</p>
 </div>
 </div>
 </div>
@@ -197,7 +197,7 @@ some other identifier.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_metadata_for_qwi_and_j2j_data_files_version_txt">5.2. <a id="versionqwi"></a>Metadata for QWI and J2J data files (version.txt)</h3>
+<h3 id="_metadata_for_qwi_j2j_and_pseo_data_files_version_txt">5.2. <a id="versionqwi"></a>Metadata for QWI, J2J, and PSEO data files (version.txt)</h3>
 <div class="paragraph">
 <p>Metadata accompanies the data files, identifying provenance, geographic and temporal coverage. These files follow the following naming convention:</p>
 </div>
@@ -364,7 +364,7 @@ These files follow the following naming convention:</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_geohi">7.3. <a id="geohi"></a>geohi</h3>
+<h3 id="_geohi">7.3. <a id="geohi"></a>Geohi</h3>
 <div class="paragraph">
 <p>( <a href="naming_geohi.csv" class="bare">naming_geohi.csv</a> )</p>
 </div>
@@ -423,7 +423,7 @@ These files follow the following naming convention:</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_demo">7.4. demo</h3>
+<h3 id="_demo">7.4. Demo</h3>
 <div class="paragraph">
 <p>( <a href="naming_demo.csv" class="bare">naming_demo.csv</a> )</p>
 </div>
@@ -464,7 +464,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_fas">7.5. fas</h3>
+<h3 id="_fas">7.5. Fas</h3>
 <div class="paragraph">
 <p>( <a href="naming_fas.csv" class="bare">naming_fas.csv</a> )</p>
 </div>
@@ -497,7 +497,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_geocat">7.6. geocat</h3>
+<h3 id="_geocat">7.6. Geocat</h3>
 <div class="paragraph">
 <p>( <a href="naming_geocat.csv" class="bare">naming_geocat.csv</a> )</p>
 </div>
@@ -542,7 +542,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_indcat">7.7. indcat</h3>
+<h3 id="_indcat">7.7. Indcat</h3>
 <div class="paragraph">
 <p>( <a href="naming_indcat.csv" class="bare">naming_indcat.csv</a> )</p>
 </div>
@@ -579,7 +579,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_owncat">7.8. owncat</h3>
+<h3 id="_owncat">7.8. Owncat</h3>
 <div class="paragraph">
 <p>( <a href="naming_owncat.csv" class="bare">naming_owncat.csv</a> )</p>
 </div>
@@ -612,7 +612,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_sa">7.9. sa</h3>
+<h3 id="_sa">7.9. Sa</h3>
 <div class="paragraph">
 <p>( <a href="naming_sa.csv" class="bare">naming_sa.csv</a> )</p>
 </div>
@@ -641,7 +641,7 @@ These files follow the following naming convention:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_ext">7.10. ext</h3>
+<h3 id="_ext">7.10. Ext</h3>
 <div class="paragraph">
 <p>( <a href="naming_ext.csv" class="bare">naming_ext.csv</a> )</p>
 </div>
@@ -686,14 +686,11 @@ These files follow the following naming convention:</p>
 <p>For a description of how schema files are versioned, see <a href="../VERSIONING.html">main directory</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="_changes_from_4_7_0">8.1. Changes from 4.7.0</h3>
+<h3 id="_changes_from_4_8_0">8.1. Changes from 4.8.0</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>None</p>
-</li>
-</ul>
-</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -701,19 +698,26 @@ These files follow the following naming convention:</p>
 <img src="./images/icons/important.png" alt="Important">
 </td>
 <td class="content">
-<div class="title">Important</div>
-<div class="paragraph">
-<p>Some of the data products noted above do not exist yet.</p>
-</div>
+.Important
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Some of the data products noted above do not exist yet.</p>
+</div>
+</div>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Released: 2021-02-04</p>
+<p>Released: 2021-06-29</p>
 </div>
 </div>
 </div>
@@ -723,7 +727,7 @@ These files follow the following naming convention:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-02-04 16:54:20 -0500
+Last updated 2021-06-29 16:08:39 -0400
 </div>
 </div>
 </body>

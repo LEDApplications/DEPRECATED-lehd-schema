@@ -252,4 +252,4 @@ if [[ "$version" = "official" ]]; then
 fi
 
 # echo "Deleting tmp files"
-rm tmp*
+rm -f tmp*

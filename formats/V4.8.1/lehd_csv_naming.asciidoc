@@ -136,7 +136,7 @@ metro,Indicates collection of CBSA-level files (*directory names only*)
 +[NNNNN]+,Any valid CBSA-derived code listed in link:label_geography_metro.csv[]
 |===================================================
 
-=== demo
+=== Demo
 ( link:naming_demo.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -147,7 +147,7 @@ include::naming_demo.csv[]
 <<<
 
 
-=== fas
+=== Fas
 ( link:naming_fas.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -158,7 +158,7 @@ include::naming_fas.csv[]
 <<<
 
 
-=== geocat
+=== Geocat
 ( link:naming_geocat.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -169,7 +169,7 @@ include::naming_geocat.csv[]
 <<<
 
 
-=== indcat
+=== Indcat
 ( link:naming_indcat.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -180,7 +180,7 @@ include::naming_indcat.csv[]
 <<<
 
 
-=== owncat
+=== Owncat
 ( link:naming_owncat.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -191,7 +191,7 @@ include::naming_owncat.csv[]
 <<<
 
 
-=== sa
+=== Sa
 ( link:naming_sa.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]
@@ -202,7 +202,7 @@ include::naming_sa.csv[]
 <<<
 
 
-=== ext
+=== Ext
 ( link:naming_ext.csv[] )
 
 [width="60%",format="csv",cols="^1,<4",options="header"]

@@ -2,4 +2,5 @@
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
 === Changes from 4.8.0
-- None
+- Add PSU World Campus OPEID
+- Update PEPS data

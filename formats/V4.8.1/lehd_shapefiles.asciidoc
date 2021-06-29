@@ -74,7 +74,7 @@ include::naming_geocat.csv[]
 |===================================================
 
 
-=== [[format]] FORMAT
+=== [[format]] Format
 ( link:variables_shp.csv[variables_shp.csv] )
 
 Files are distributed as https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml[ESRI Shapefiles], packaged as https://en.wikipedia.org/wiki/Zip_(file_format)[ZIP] files. The SHP component of these archives is described here. Other components (dbf, prj, shx) files are not documented here, we refer users to https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml .
@@ -90,17 +90,17 @@ include::variables_shp.csv[]
 
 FIPS State Postal Code as per https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html
 
-==== GEOGRAPHY
+==== Geography
 ( link:label_geography.csv[] )
 
 The valid codes correspond to those listed on link:label_geography.csv[].
 
-==== NAME
+==== Name
 ( link:label_geography.csv[] )
 
 This is a string that corresponds in general to the 'label' field on link:label_geography.csv[]. Minor deviations for ease of exposition are possible.
 
-=== Common files
+=== Common Files
 ==== State
 ( link:lehd_shp_gs.zip[] )
 
@@ -113,7 +113,7 @@ No transformations occur to this layer other than those listed above.
 
 * STUSPS is appended to the NAME field so that county names are nationally unique. Example: "Cook, IL"
 
-==== CBSA - within State
+==== CBSA (within State)
 ( link:lehd_shp_gm.zip[] )
 
 * All features are split into state-specific CBSA features by intersecting each feature with the state shapefile features.
@@ -127,7 +127,7 @@ No transformations occur to this layer other than those listed above.
 The WIA/WIB shapefiles are built from the Place, County Subdivision, and County shapefiles from TIGER/Line based on definitions provided by the LED state partners.
 
 === Job-to-Job Flow Geographies
-==== Metropolitan (complete)
+==== Metropolitan (Complete)
 ( link:lehd_shp_gb.zip[] )
 
 * Micropolitan areas are removed and state remainder areas are added as new features. State remainders are assigned unique codes ([STUSPS]+999) and names ("Not in metropolitan area, [STUSPS]").

@@ -102,7 +102,7 @@ Basic Schema
 ------------
 Each data file is structured as a CSV file. The first columns contain <<identifiers>>, subsequent columns contain <<indicators>>, followed by <<statusflags,status flags>>. In some cases, visually formatted Excel (XLSX) files are also available,  containing the same information together with header lines  on each sheet.
 
-=== Generic structure
+=== Generic Structure
 
 [width=\"30%\",format=\"csv\",cols=\"<2\",options=\"header\"]
 |===================================================
@@ -153,7 +153,8 @@ done
 ### Hardcode identifier order
 for arg in lehd_identifiers_qwi.csv lehd_identifiers_j2j.csv lehd_identifiers_j2jod.csv lehd_identifiers_pseo.csv
 do
-  name="$(echo ${arg%*.csv}| sed 's/lehd_//; s/_/ for /; s/ident/Ident/')"
+  name="$(echo ${arg%*.csv}| sed 's/lehd_//; s/_/ for /; s/ident/Ident/; s/qwi/QWI/; s/j2jod/J2JOD/; s/j2j/J2J/;
+  s/pseo/PSEO/' )"
   echo "==== $name
 ( link:${arg}[] )
 
@@ -183,7 +184,7 @@ list the indicators available on each file.  The descriptor files themselves are
 - ''Concept'' classifies the variables into higher-level concepts. The taxonomy for these concepts has not been finalized yet, see link:label_concept_draft.csv[label_concept_draft.csv] for a draft version.
 - The ''Base'' indicates the denominator used to compute the statistic, and may be '1'.
 
-==== National QWI and state-level QWI ====
+==== National QWI and State-Level QWI ====
 
 ( link:variables_qwi.csv[variables_qwi.csv] )
 [width=\"95%\",format=\"csv\",cols=\"3*^2,<5,<5,<2,<2,^2\",options=\"header\"]
@@ -192,7 +193,7 @@ include::variables_qwi.csv[]
 |===================================================
 <<<
 
-==== National QWI and state-level QWI rates ====
+==== National QWI and State-Level QWI Rates ====
 Rates are computed from published data, and are provided as a convenience.
 
 
@@ -205,7 +206,7 @@ include::variables_qwir.csv[]
 
 <<<
 
-==== Job-to-job flow counts (J2J)
+==== Job-to-Job Flow Counts (J2J)
 ( link:variables_j2j.csv[] )
 [width=\"95%\",format=\"csv\",cols=\"3*^2,<5,<5,<2,<2,^1\",options=\"header\"]
 |===================================================
@@ -213,7 +214,7 @@ include::variables_j2j.csv[]
 |===================================================
 <<<
 
-==== Job-to-job flow rates (J2JR)
+==== Job-to-Job Flow Rates (J2JR)
 ( link:variables_j2jr.csv[] )
 
 Rates are computed from published data, and are provided as a convenience.
@@ -227,7 +228,7 @@ include::variables_j2jr.csv[]
 
 <<<
 
-==== Job-to-job flow Origin-Destination (J2JOD)
+==== Job-to-Job Flow Origin-Destination (J2JOD)
 ( link:variables_j2jod.csv[] )
 [width=\"95%\",format=\"csv\",cols=\"3*^2,<5,<5,<2,<2,^1\",options=\"header\"]
 |===================================================
@@ -251,7 +252,7 @@ include::$tmp_pseoevars_cols[]
 tmp_pseofvars_cols=$(mktemp -p $cwd)
 cut -d ',' -f 1,3,5,6,7 variables_pseof.csv >> $tmp_pseofvars_cols
 echo "
-==== Post-Secondary Employment Outcomes Flows(PSEOF)
+==== Post-Secondary Employment Outcomes Flows (PSEOF)
 ( link:variables_pseof.csv[] )
 [width=\"95%\",format=\"csv\",cols=\"<1,<3,<5,2*<1\",options=\"header\"]
 |===================================================
@@ -280,7 +281,7 @@ done
 
 echo "
 <<<
-=== [[vmeasures]]Variability measures
+=== [[vmeasures]]Variability Measures
 The following tables and associated mapping files
 list the variability measures available on each file.  The ''Variability Measure'' is the short name of the variable on the CSV files,
 suitable for machine processing in a wide variety of statistical applications. When given, the ''Alternate Name'' may appear in related documentation and articles.
@@ -299,7 +300,7 @@ A missing variability measure indicates a structural zero in the corresponding i
 
 //Not all indicators have associated variability measures. For more details, see the following document TBD.
 
-==== Generic structure
+==== Generic Structure
 
 [width=\"30%\",format=\"csv\",cols=\"<2\",options=\"header\"]
 |===================================================
@@ -340,7 +341,7 @@ of variability measures are printed, but the complete list is available in the l
 
 <<<
 
-==== National QWI and state-level QWI ====
+==== National QWI and State-Level QWI ====
 
 ( link:variables_qwiv.csv[variables_qwiv.csv] )
 [width=\"95%\",format=\"csv\",cols=\"2*^2,<5,<5,<2\",options=\"header\"]
@@ -349,7 +350,7 @@ include::tmp_variables_qwiv.csv[]
 |===================================================
 
 <<<
-==== National QWI and state-level QWI rates ====
+==== National QWI and State-Level QWI Rates ====
 
 ( link:variables_qwirv.csv[variables_qwirv.csv] )
 [width=\"95%\",format=\"csv\",cols=\"2*^2,<5,<5,<2\",options=\"header\"]
@@ -360,7 +361,7 @@ include::tmp_variables_qwirv.csv[]
 
 <<<
 
-==== Job-to-job flow counts (J2J)
+==== Job-to-Job Flow Counts (J2J)
 Soon.
 //( link:variables_j2j.csv[] )
 //[width=\"95%\",format=\"csv\",cols=\"3*^2,<5\",options=\"header\"]
@@ -370,7 +371,7 @@ Soon.
 //<<<
 //
 
-==== Job-to-job flow rates (J2JR)
+==== Job-to-Job Flow Rates (J2JR)
 Soon.
 //( link:variables_j2jr.csv[] )
 //[width=\"95%\",format=\"csv\",cols=\"3*^2,<5\",options=\"header\"]
@@ -379,7 +380,7 @@ Soon.
 //|===================================================
 //<<<
 
-==== Job-to-job flow Origin-Destination (J2JOD)
+==== Job-to-Job Flow Origin-Destination (J2JOD)
 Soon.
 //( link:variables_j2jod.csv[] )
 //[width=\"95%\",format=\"csv\",cols=\"^3,^2,^3,<5\",options=\"header\"]
@@ -403,7 +404,7 @@ Categorical variable descriptions are displayed above each table, with the varia
 for arg in $(ls label_*csv| grep -vE "geo|ind_level|industry|agg_level|flags|fips|stusps|concept_draft|pseo|cip|inst|degree")
 do
   name=$(echo ${arg%*.csv}| sed 's/label_//')
-  echo "=== $name
+  echo "=== ${name^}
 ( link:${arg}[] )
 
 [width=\"60%\",format=\"csv\",cols=\"^1,<4\",options=\"header\"]
@@ -500,7 +501,7 @@ include::label_institution.csv[lines=2630;32017;17398;11819;23062;19324]
 " >> $asciifile
 
 echo "
-=== Degree level
+=== Degree Level
 ( link:label_degree_level.csv[] )
 
 The degree levels are sourced from the
@@ -515,7 +516,7 @@ include::label_degree_level.csv[]
 echo "
 === Classification of Instruction Programs (CIP)
 
-==== CIP levels
+==== CIP Levels
 ( link:label_cip_level.csv[] )
 
 [width=\"60%\",format=\"csv\",cols=\"^1,<4\",options=\"header\"]
@@ -600,7 +601,7 @@ do
 	tmp_geo_csv=$(mktemp -p $cwd)
 	cut -d ',' -f 1,2,3 $arg >> $tmp_geo_csv
   echo "[[$name]]
-==== [[geolevel]] Geographic levels
+==== [[geolevel]] Geographic Levels
 Geography labels for data files are provided in separate files, by scope. Each file 'label_geograpy_SCOPE.csv' may contain one or more types of records as flagged by <<geolevel,geo_level>>. For convenience, a composite file containing all geocodes is available as link:label_geography.csv[].
 The 2019 vintage of https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html[Census TIGER/Line geography] is used for all tabulations as of the R2020Q1 release.
 
@@ -622,7 +623,7 @@ tmp_stusps_csv=$(mktemp -p $cwd)
 cut -d ',' -f 1,2 label_stusps.csv >> $tmp_stusps_csv
 echo "
 
-==== [[geostate]]National and state-level values ====
+==== [[geostate]]National and State-Level Values ====
 ( link:$nsfile[] )
 
 The file link:$nsfile[$nsfile] contains values and labels
@@ -642,7 +643,7 @@ for all entities of <<geolevel,geo_level>> 'D'. For more information on which st
 include::label_geography_division.csv[]
 |===================================================
 
-==== [[stusps]]State postal codes
+==== [[stusps]]State Postal Codes
 
 Some parts of the schema use (lower or upper-case) state postal codes.
 
@@ -654,7 +655,7 @@ include::$tmp_stusps_csv[]
 |===================================================
 
 
-==== [[geosubstate]]Detailed state and substate level values
+==== [[geosubstate]]Detailed State and Substate Level Values
 
 Files of type 'label_geography_[ST].csv' will contain identifiers and labels for geographic areas entirely comprised within a given state '[ST]'. State-specific parts of cross-state CBSA, in records of type <<geolevel,geo_level>> = M, are present on files of type 'label_geography_[ST].csv'. The file link:label_geography_metro.csv[] contains labels for records of type <<geolevel,geo_level>> = B, for metropolitan areas only.
 
@@ -713,7 +714,7 @@ tmp_nsfileshort_csv=$(mktemp -p $cwd)
 cut -d ',' -f 1-9 $nsfileshort >> $tmp_nsfileshort_csv
 echo "
 <<<
-=== Aggregation level
+=== Aggregation Level
 
 ==== J2J
 ( link:$nsfile[] )
@@ -796,7 +797,7 @@ The characteristics available on an aggregation level are repeated using a serie
 include::$tmp_pseoagg_rows[]
 |===================================================
 
-===== Restricted 4-digit CIP tabulations in earnings data (PSEOE)
+===== Restricted 4-Digit CIP Tabulations in Earnings Data (PSEOE)
 
 Earnings estimates and counts are provided only at the 2-digit CIP level for Masters and Doctor Research programs (degree levels 07 and 17). Records are included for 4-digit programs observed, but all measures are suppressed.
 ">> $asciifile
@@ -989,5 +990,5 @@ if [[ "$version" = "official" ]]; then
   [[ -f $(basename $asciifile .asciidoc).pdf  ]] && echo "$(basename $asciifile .asciidoc).pdf created"
 fi
 
-echo "Removing tmp files"
-rm -f $cwd/tmp.* #remove files made by mktemp
+# echo "Deleting tmp files"
+rm tmp*

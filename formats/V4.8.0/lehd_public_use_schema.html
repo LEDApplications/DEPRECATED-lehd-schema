@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="&lt;ces.qwi.feedback@census.gov&gt;">
 <title>LEHD Public Use Data Schema V4.8.0</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -15,7 +15,7 @@
 <h1>LEHD Public Use Data Schema V4.8.0</h1>
 <div class="details">
 <span id="author" class="author">&lt;ces.qwi.feedback@census.gov&gt;</span><br>
-<span id="revdate">21 April 2021</span>
+<span id="revdate">04 February 2021</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -125,12 +125,6 @@
 <li><a href="#_version_metadata_for_qwi_j2j_and_pseo_files_version_txt">8.1. Version Metadata for QWI, J2J, and PSEO Files (version.txt)</a></li>
 <li><a href="#_additional_metadata_for_j2jod_files_avail_csv">8.2. Additional Metadata for J2JOD Files (avail.csv)</a></li>
 <li><a href="#_metadata_on_indicator_availability">8.3. Metadata on Indicator Availability</a></li>
-<li><a href="#_additional_metadata_for_pseo_files">8.4.  Additional Metadata for PSEO Files</a>
-<ul class="sectlevel3">
-<li><a href="#_pseo_data_partners_and_coverage_pseo_st_partners_txt">8.4.1. PSEO Data Partners and Coverage (pseo_[ST]_partners.txt)</a></li>
-<li><a href="#_institutions_available_within_pseo_pseo_st_institutions_csv">8.4.2. Institutions Available Within PSEO (pseo_[ST]_institutions.csv)</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a href="#_changes">9.  Changes</a>
@@ -156,7 +150,7 @@
 <td class="content">
 <div class="title">Important</div>
 <div class="paragraph">
-<p>This specification is draft. Feedback is welcome. Please write us at <a href="mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema_draft">ces.qwi.feedback@census.gov</a>.</p>
+<p>Feedback is welcome. Please write us at <a href="mailto:ces.qwi.feedback@census.gov?subject=LEHD_Schema">ces.qwi.feedback@census.gov</a>.</p>
 </div>
 </td>
 </tr>
@@ -5323,9 +5317,9 @@ Delaware
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>QWI_F DE 10 1998:3-2020:2 V4.7.0 R2021Q1 qwipu_de_20210302_1043
-QWI_FA DE 10 1998:3-2020:1 V4.7.0 R2021Q1 qwipu_de_20210302_1043
-QWI_FS DE 10 1998:3-2020:1 V4.7.0 R2021Q1 qwipu_de_20210302_1043</pre>
+<pre>QWI_F DE 10 1998:3-2020:1 V4.7.0 R2020Q4 qwipu_de_20201009_0545
+QWI_FA DE 10 1998:3-2018:4 V4.7.0 R2020Q4 qwipu_de_20201009_0545
+QWI_FS DE 10 1998:3-2018:4 V4.7.0 R2020Q4 qwipu_de_20201009_0545</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5335,7 +5329,7 @@ tabulations (obtained from <a href="https://lehd.ces.census.gov/data/j2j/latest_
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>J2J DE 10 2000:2-2020:1 V4.7.0 R2021Q1 j2jpu_de_20210325_2302</pre>
+<pre>J2J DE 10 2000:2-2019:4 V4.7.0 R2020Q4 j2jpu_de_20201204_1309</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5476,92 +5470,6 @@ PSEOF CO 08 2001-2015 V4.5.0 2019Q1 pseopu_co_20190617_0839</pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="_additional_metadata_for_pseo_files">8.4. <a id="metadatapseo"></a> Additional Metadata for PSEO Files</h3>
-<div class="paragraph">
-<p>Several additional files within each state release are included to provide information on the institutions within the scope of PSEO. The ALL directory consolidates the individual state files.</p>
-</div>
-<div class="sect3">
-<h4 id="_pseo_data_partners_and_coverage_pseo_st_partners_txt">8.4.1. PSEO Data Partners and Coverage (pseo_[ST]_partners.txt)</h4>
-<div class="paragraph">
-<p>This file contains information on PSEO coverage of graduates, as well as the partner organization(s) providing data. This is presented on several lines of a text file, as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>State numeric FIPS code and state name</p>
-</li>
-<li>
-<p>Share of statewide graduates covered by PSEO</p>
-</li>
-<li>
-<p>Name(s) of data provider(s) (multiple lines, as required)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The share is derived from <a href="https://nces.ed.gov/ipeds/use-the-data">Integrated Postsecondary Education Data System (IPEDS)</a> data, using program graduates from 2015 for degree levels within the scope of PSEO. It calculates the number of graduates from institutions that are available to PSEO as a fraction of graduates from all institutions within IPEDS for the reference state.</p>
-</div>
-<div class="paragraph">
-<p>A sample file follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>08 Colorado
-72% of statewide graduates covered (2015 estimate)
-Colorado Department of Higher Education</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_institutions_available_within_pseo_pseo_st_institutions_csv">8.4.2. Institutions Available Within PSEO (pseo_[ST]_institutions.csv)</h4>
-<div class="paragraph">
-<p>(<a href="variables_pseo_institutions.csv" class="bare">variables_pseo_institutions.csv</a>)</p>
-</div>
-<div class="paragraph">
-<p>This file provides the list of institutions that are included in the PSEO release. This file is an extract from <a href="label_institution.csv" class="bare">label_institution.csv</a>.</p>
-</div>
-<div class="paragraph">
-<p>The files are structured as follows:</p>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 80%;">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 57.1429%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">variable</th>
-<th class="tableblock halign-left valign-top">type</th>
-<th class="tableblock halign-left valign-top">label</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">﻿institution</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Char(8)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier for Institution (OPEID)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Char(70)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of Institution</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">institution_state</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Char(2)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institution State (Postal Code)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">statefips</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Char(2)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Institution State (Numeric FIPS Code)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -5577,19 +5485,13 @@ Colorado Department of Higher Education</pre>
 <li>
 <p>Update EmpSpv due to the restructuring of the QWI weights</p>
 </li>
-<li>
-<p>Added PSEO metadata files for data partners and coverage</p>
-</li>
-<li>
-<p>Underlying geovintage updated to reflect 2020 TIGER/Line geography - except for CBSAs. Tabulations for "B" and "M" geo_levels continue to use 2019 TIGER/Line geographies.</p>
-</li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Released: 2021-04-21</p>
+<p>Released: 2021-02-04</p>
 </div>
 </div>
 </div>
@@ -5599,7 +5501,7 @@ Colorado Department of Higher Education</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-21 00:12:22 UTC
+Last updated 2021-02-04 16:54:22 -0500
 </div>
 </div>
 </body>

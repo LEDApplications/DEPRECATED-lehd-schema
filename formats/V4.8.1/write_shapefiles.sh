@@ -94,7 +94,9 @@ if [[ "$version" = "official" ]]; then
   [[ -f ${basefile}.pdf  ]] && echo "${basefile}.pdf created"
 fi
 
-echo "Removing tmp files and $asciifile"
+# echo "Deleting tmp files"
+rm tmp*
+
 exit 0
 #
 # ==================== end of script

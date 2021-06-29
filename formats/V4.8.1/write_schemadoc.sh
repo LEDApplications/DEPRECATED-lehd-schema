@@ -989,5 +989,5 @@ if [[ "$version" = "official" ]]; then
   [[ -f $(basename $asciifile .asciidoc).pdf  ]] && echo "$(basename $asciifile .asciidoc).pdf created"
 fi
 
-echo "Removing tmp files"
-rm -f $cwd/tmp.* #remove files made by mktemp
+# echo "Deleting tmp files"
+rm tmp*

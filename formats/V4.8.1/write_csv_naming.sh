@@ -251,5 +251,5 @@ if [[ "$version" = "official" ]]; then
   echo "$(basename $asciifile .asciidoc).pdf created"
 fi
 
-echo "Deleting tmp files"
+# echo "Deleting tmp files"
 rm tmp*

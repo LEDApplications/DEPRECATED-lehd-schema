@@ -4,6 +4,7 @@ addons:
   apt:
     packages:
       - libtext-multimarkdown-perl
+      - file
 
 sudo: required
 

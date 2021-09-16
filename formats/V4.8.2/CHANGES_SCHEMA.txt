@@ -1,5 +1,5 @@
 == [[changes]] Changes
 For a description of how schema files are versioned, see link:../VERSIONING{ext-relative}[main directory].
 
-=== Changes from 4.8.0
-- Update of institution list (label_institution.csv)
+=== Changes from 4.8.1
+- None

@@ -12,7 +12,9 @@ For official LEHD-published schema, see [http://lehd.ces.census.gov/data/schema/
 You can browse the following schemas (in reverse chronological order of major versions):
 
 * V4.8 versions
-    * [V4.8.1](https://ledapplications.github.io/lehd-schema/formats/V4.8.1/lehd_public_use_schema.html): The working
+    * [V4.8.2](https://ledapplications.github.io/lehd-schema/formats/V4.8.2/lehd_public_use_schema.html): The working
+    V4.8.2 version.
+    * [V4.8.1](https://ledapplications.github.io/lehd-schema/formats/V4.8.1/lehd_public_use_schema.html): The released
     V4.8.1 version.
     * [V4.8.0](https://ledapplications.github.io/lehd-schema/formats/V4.8.0/lehd_public_use_schema.html): The released 
       V4.8.0 version.

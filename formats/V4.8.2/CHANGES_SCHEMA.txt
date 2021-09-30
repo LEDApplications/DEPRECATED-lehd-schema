@@ -3,3 +3,4 @@ For a description of how schema files are versioned, see link:../VERSIONING{ext-
 
 === Changes from 4.8.1
 - Added IPEDS status flag for partially missing counts
+- Updated PSEO earnings to 2019 dollars

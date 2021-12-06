@@ -1,3 +1,10 @@
+
+# ⚠ DEPRECATED LEHD Schema ⚠
+
+## This repository has been [superseded by a newer version](https://github.com/LEDApplications/lehd-schema).
+All information below has been incorporated into the new repo and is preserved here for posterity.
+
+
 [![Build Status](https://travis-ci.com/LEDApplications/lehd-schema.svg?branch=master)](https://travis-ci.com/LEDApplications/lehd-schema)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597959.svg)](https://doi.org/10.5281/zenodo.597959)
